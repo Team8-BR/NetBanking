@@ -4,13 +4,17 @@ import { CreateAccountComponent } from "./create-account/create-account.componen
 import { HomePageComponent } from "./home-page/home-page.component";
 import { LoginComponent } from "./login/login.component";
 import { RegistrationComponent } from "./registration/registration.component";
+import { UserPageComponent } from "./user-page/user-page.component";
+
 
 const AppRoutes : Routes = [
     {path : '', component : HomePageComponent},
     {path : 'Login', component : LoginComponent},
     {path : 'Register', component : RegistrationComponent},
-    {path : 'CreateAccount', component : CreateAccountComponent}    
+    {path : 'CreateAccount', component : CreateAccountComponent},
+    {path : 'Dashboard', component : UserPageComponent}
 ]
+
 
 
 @NgModule({
