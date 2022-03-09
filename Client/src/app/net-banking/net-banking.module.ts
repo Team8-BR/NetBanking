@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+
 
 
 import { LoginComponent } from './login/login.component';
@@ -9,22 +9,25 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 
 
 import { UserPageComponent } from './user-page/user-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
 
     LoginComponent,
     RegistrationComponent,
-
+    HomePageComponent,
     CreateAccountComponent,
 
 
     UserPageComponent
   ],
-  imports: [
-    BrowserModule
+  imports: [RouterModule
+    
   ],
   providers: [],
-  bootstrap: []
+  bootstrap: [],
+  exports : [HomePageComponent]
 })
-export class HomeModule { }
+export class NetBankingModule { }
