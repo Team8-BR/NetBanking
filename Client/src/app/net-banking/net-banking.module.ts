@@ -11,10 +11,13 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { UserPageComponent } from './user-page/user-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule } from '@angular/router';
+import { NetBankingRoutingModule } from './net-banking-routing.module';
+
+
 
 @NgModule({
   declarations: [
-
+    
     LoginComponent,
     RegistrationComponent,
     HomePageComponent,
@@ -23,11 +26,11 @@ import { RouterModule } from '@angular/router';
 
     UserPageComponent
   ],
-  imports: [RouterModule
+  imports: [RouterModule,NetBankingRoutingModule
     
   ],
   providers: [],
-  bootstrap: [],
-  exports : [HomePageComponent]
+  bootstrap: [HomePageComponent],
+  exports : [HomePageComponent,LoginComponent,]
 })
 export class NetBankingModule { }
