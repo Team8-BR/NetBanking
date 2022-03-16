@@ -13,7 +13,7 @@ namespace server.Controllers
         [HttpPost]
         [Route("{AccountField}")]
         public IActionResult InsertAccountData(AccountFields accountFields )
-        {
+        { 
             AccountfieldDao data = new AccountfieldDao();
             data.AddAccountDetail(accountFields);
             return this.Ok(200);
