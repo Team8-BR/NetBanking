@@ -118,3 +118,10 @@ D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.cspr
 D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.dll
 D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.pdb
 D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
+F:\My Work\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.csproj.AssemblyReference.cache
+F:\My Work\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+F:\My Work\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+F:\My Work\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+F:\My Work\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.MvcApplicationPartsAssemblyInfo.cache
+F:\My Work\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.dll
+F:\My Work\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.pdb

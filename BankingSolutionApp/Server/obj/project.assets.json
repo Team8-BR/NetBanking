@@ -5721,24 +5721,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sunil\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\My Work\\Project\\BankingSolutionApp\\Server\\Server.csproj",
+      "projectUniqueName": "F:\\My Work\\NetBanking\\BankingSolutionApp\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "D:\\My Work\\Project\\BankingSolutionApp\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\sunil\\.nuget\\packages\\",
-      "outputPath": "D:\\My Work\\Project\\BankingSolutionApp\\Server\\obj\\",
+      "projectPath": "F:\\My Work\\NetBanking\\BankingSolutionApp\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "F:\\My Work\\NetBanking\\BankingSolutionApp\\Server\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sunil\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5785,12 +5780,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.22, 3.1.22]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5799,7 +5788,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.417\\RuntimeIdentifierGraph.json"
       }
     }
   }

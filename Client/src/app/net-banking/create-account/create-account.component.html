@@ -1,1 +1,230 @@
-<p>create-account works!</p>
+<br>
+<div>
+    <h4>Login to your Account</h4>
+    <form [formGroup]="login" (ngSubmit)="submitData(login)">
+        <label for="Title"><Title></Title></label> &nbsp;
+        <input name="Title" type="text" /><br><br>
+        <div [hidden]="login.controls['Title'].valid || login.controls['Title'].pristine">
+            <div *ngIf="login.controls['Title'].errors?.['required']">
+              title is required
+            </div>
+          </div>
+
+        <label for="First Name">First name</label>&nbsp;
+        <input name="First Name" type="text" /><br><br>
+        <div [hidden]="login.controls['First Name'].valid || login.controls['First Name'].pristine">
+            <div *ngIf="login.controls['First Name'].errors?.['required']">
+              name  is required
+            </div>
+          </div>
+
+        <label for="Middle Name">Middle name</label> &nbsp;
+        <input name="Middle Name" type="text" /><br><br>
+        <div [hidden]="login.controls['Middle Name'].valid || login.controls['Middle Name'].pristine">
+            <div *ngIf="login.controls['Middle Name'].errors?.['required']">
+              name is required
+            </div>
+          </div>
+
+        <label for="Last Name">Last Name</label>&nbsp;
+        <input name="Last Name" type="text" /><br><br>
+        <div [hidden]="login.controls['Last Name'].valid || login.controls['Last Name'].pristine">
+            <div *ngIf="login.controls['Last Name'].errors?.['required']">
+              name is required
+            </div>
+          </div>
+
+        <label for="Fathers Name">Fathers name</label> &nbsp;
+        <input name="Fathers Name" type="text" /><br><br>
+        <div [hidden]="login.controls['Fathers Name'].valid || login.controls['Fathers Name'].pristine">
+            <div *ngIf="login.controls['Fathers name'].errors?.['required']">
+              name is required
+            </div>
+          </div>
+
+        <label for="Mobile Number">Mobile Number</label>&nbsp;
+        <input name="Mobile Number" type="text" /><br><br>
+        <div [hidden]="login.controls['Mobile Number'].valid || login.controls['Mobile Number'].pristine">
+            <div *ngIf="login.controls['Mobile Number'].errors?.['required']">
+              number  is required
+            </div>
+          </div> 
+
+        <label for="Email ID">Email ID</label>&nbsp;
+        <input name="Email ID" type="email" /><br><br>
+        <div [hidden]="login.controls['Email ID'].valid || login.controls['Email ID'].pristine">
+            <div *ngIf="login.controls['Email ID'].errors?.['required']">
+              emailid is required
+            </div>
+          </div>
+
+        <label for="Aadhar Card Number">Aadhar Card Number</label>&nbsp;
+        <input name="Aadhar Card Number" type="text" /><br><br>
+        <div [hidden]="login.controls['Aadhar Card Number'].valid || login.controls['Aadhar Card Number'].pristine">
+            <div *ngIf="login.controls['Aadhar Card Number'].errors?.['required']">
+              number is required
+            </div>
+          </div>
+
+        <label for="Date of birth">Date of birth</label>&nbsp;
+        <input name="Date of birth" type="text" /><br><br>
+        <div [hidden]="login.controls['Date of birth'].valid || login.controls['Date of birth'].pristine">
+            <div *ngIf="login.controls['Date of birth'].errors?.['required']">
+              Date of birth is required
+            </div>
+          </div>
+
+        <h1>Residential Address</h1>
+
+        <label for="Address Line1">Enter Address Line1</label>&nbsp;
+        <input name="Address Line1" type="text" /><br><br>
+        <div [hidden]="login.controls['Address Line1'].valid || login.controls['Address Line1'].pristine">
+            <div *ngIf="login.controls['Address Line1'].errors?.['required']">
+              Address is required
+            </div>
+          </div>
+        
+
+        <label for="Address Line2">Address Line2</label>&nbsp;
+        <input name="Address Line2" type="text" /><br><br>
+        <div [hidden]="login.controls['Address Line2'].valid || login.controls['Address Line2'].pristine">
+            <div *ngIf="login.controls['Address Line2'].errors?.['required']">
+              Address is required
+            </div>
+          </div>
+
+        <label for="Landmark">Landmark</label>&nbsp;
+        <input name="Landmark" type="text" /><br><br>
+        <div [hidden]="login.controls['Landmark'].valid || login.controls['Landmark'].pristine">
+            <div *ngIf="login.controls['Landmark'].errors?.['required']">
+              Landmark is required
+            </div>
+          </div>
+
+        <label for="State">State</label>&nbsp;
+        <input name="State" type="text" /><br><br>
+        <div [hidden]="login.controls['State'].valid || login.controls['State'].pristine">
+            <div *ngIf="login.controls['State'].errors?.['required']">
+              State is required
+            </div>
+          </div>
+
+        <label for="City">City</label>&nbsp;
+        <input name="City" type="text" /><br><br>
+        <div [hidden]="login.controls['City'].valid || login.controls['City'].pristine">
+            <div *ngIf="login.controls['City'].errors?.['required']">
+              City is required
+            </div>
+          </div>
+
+        <label for="Date of birth">Date of birth</label>&nbsp;
+        <input name="Date of birth" type="text" /><br><br>
+        <div [hidden]="login.controls['Date of birth'].valid || login.controls['Date of bith'].pristine">
+            <div *ngIf="login.controls['Date of birth'].errors?.['required']">
+              Date of birth is required
+            </div>
+          </div>
+
+        <label for="Pincode">Pincode</label>&nbsp;
+        <input name="Pincode" type="number" /><br><br>
+
+        <h1> Permanent address</h1>
+
+        <input type="checkbox" name="Permanent Address same as Mailing Address" value="Permanent Address same as Mailing Address" ><br>
+        <label for="Address Line 1">Enter Address</label>&nbsp;
+        <input name="Address Line" type="text" /><br><br>
+        <div [hidden]="login.controls['Address Line1'].valid || login.controls['Address Line1'].pristine">
+            <div *ngIf="login.controls['Address Line1'].errors?.['required']">
+              Address is required
+            </div>
+          </div>
+        
+
+        <label for="Address Line2">Address Line2</label>&nbsp;
+        <input name="Address Line2" type="text" /><br><br>
+        <div [hidden]="login.controls['Address Line2'].valid || login.controls['Address Line2'].pristine">
+            <div *ngIf="login.controls['Address Line2'].errors?.['required']">
+              Address is required
+            </div>
+          </div>
+        
+
+        <label for="Landmark">Landmark</label>&nbsp;
+        <input name="Landmark" type="text" /><br><br>
+        <div [hidden]="login.controls['Address Line1'].valid || login.controls['Address Line1'].pristine">
+            <div *ngIf="login.controls['Address Line1'].errors?.['required']">
+              Address is required
+            </div>
+          </div>
+        
+
+        <label for="State">State</label>&nbsp;
+        <input name="State" type="text" /><br><br>
+        <div [hidden]="login.controls['State'].valid || login.controls['State'].pristine">
+            <div *ngIf="login.controls['State'].errors?.['required']">
+              State is required
+            </div>
+          </div>
+        
+
+        <label for="City">City</label>&nbsp;
+        <input name="City" type="text" /><br><br>
+        <div [hidden]="login.controls['City'].valid || login.controls['City'].pristine">
+            <div *ngIf="login.controls['City'].errors?.['required']">
+              city is required
+            </div>
+          </div>
+        
+
+        <label for="Date of birth">Date of birth</label>&nbsp;
+        <input name="Date of birth" type="text" /><br><br>
+        <div [hidden]="login.controls['Date of birth'].valid || login.controls['Date of birth'].pristine">
+            <div *ngIf="login.controls['City'].errors?.['required']">
+              Date of birth is required
+            </div>
+          </div>
+
+        <label for="Pincode">Pincode</label>&nbsp;
+        <input name="Pincode" type="number" /><br><br>
+        <div [hidden]="login.controls['Pincode'].valid || login.controls['Pincode'].pristine">
+            <div *ngIf="login.controls['Pincode'].errors?.['required']">
+              Pincode is required
+            </div>
+          </div>
+
+        <h2>Occupation Details</h2>
+        <label for="Occupation Type">Occupation Type</label>&nbsp;
+        <input name="Occupation Type" type="text" /><br><br>
+        <div [hidden]="login.controls['Occupation Details'].valid || login.controls['Occupation Details'].pristine">
+            <div *ngIf="login.controls['Occupation Details'].errors?.['required']">
+              Details is required
+            </div>
+          </div>
+        
+        
+        <label for="Source of Income">Source of Income</label>&nbsp;
+        <input name="Source of Income" type="text" /><br><br>
+        <div [hidden]="login.controls['Source of Income'].valid || login.controls['Source of Income'].pristine">
+            <div *ngIf="login.controls['Source of Income'].errors?.['required']">
+              Income  is required
+            </div>
+          </div>
+
+        <label for="Gross Annual Income">Gross Annual Income</label>&nbsp;
+        <input name="Gross Annual Income" type="text" /><br><br>
+        <div [hidden]="login.controls['Gross Annual Income'].valid || login.controls['Gross Annual Income'].pristine">
+            <div *ngIf="login.controls['Gross Annual Income'].errors?.['required']">
+              Income is required
+            </div>
+          </div>
+
+        <h2>Debit/ATM Card</h2>
+        <h2>Do you want a debit card?*</h2>
+
+        <input type="checkbox" name="Opt for Net Banking" value="Opt for Net Banking" ><br>
+        <input type="checkbox" name="I agree" value="I agree" ><br>
+
+        <button type="submit" >Submit</button>
+    </form>
+</div>
+
