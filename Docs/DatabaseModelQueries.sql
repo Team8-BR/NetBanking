@@ -45,7 +45,7 @@ CreditCardNumber int primary key not null,
 CreditCardExpiry date not null,
 CreditCardCVV int not null
 )
---drop table NetBankingCredentials
+--drop table TransactionDetails
 Create table ModeOfTransaction
 (	
 ModeID int primary key not null,
@@ -54,8 +54,8 @@ MaturityInstruction varchar
 )
 create table TransactionDetails
 (	
-TransactionReferenceID	varchar(20) not null,
-AccountNumber varchar(20) primary key not null,
+TransactionReferenceID 	varchar(20) primary key not null,
+AccountNumber varchar(20)  not null,
 RecipientAccountNumber varchar(20) not null,
 Name varchar(50) not null,
 Nickname varchar(50),
@@ -68,8 +68,11 @@ alter table AccountFields add constraint fkey_Accno foreign key(AccountNumber) r
 alter table AccountFields add constraint fkey_CreditcardAccDetails foreign key(CreditcardNumber) references  CreditcardCredentials(CreditcardNumber)
 alter table AccountFields add constraint fkey_DebitcardAccDetails foreign key(DebitcardNumber) references  DebitcardCredentials(DebitcardNumber)
 alter table AccountFields add constraint fkey_UserID foreign key(UserID) references  NetBankingCredentials(UserID)
-alter table NetBankingCredentials add constraint fkey_Net_Accno foreign key(AccountNumber) references  TransactionDetails(AccountNumber)
-alter table NetBankingCredentials add AccountNumber	varchar(20) not null	
+alter table NetBankingCredentials add constraint fkey_Net_Accno foreign key(AccountNumber) references  AccountFields(AccountNumber)
+alter table TransactionDetails add constraint fkey_modeID foreign key(ModeID) references  ModeOfTransaction(ModeID)
+alter table TransactionDetails add TransactionReferenceID varchar(20) Primary key not null	
+alter table AccountFields add AccountNumber varchar(20) primary key not null	
+alter table AccountFields add Status varchar(20) not null	
 
 Create table AdminDetails
 (
