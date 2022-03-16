@@ -2,8 +2,8 @@
 namespace server.BusinessModels
 {
 	public class TransactionDetails
-	{
-		public string RecipientAccountNumber { get; set; }
+    {
+        public string RecipientAccountNumber { get; set; }
         public string Name { get; set; }
         public string Nickname { get; set; }
         public decimal? Transactionamount { get; set; }
@@ -13,6 +13,8 @@ namespace server.BusinessModels
         public string AccountNumber { get; set; }
         public string TransactionReferenceId { get; set; }
 
+      //  public virtual AccountField AccountNumberNavigation { get; set; }
+        public virtual ModOfTransaction Mode { get; set; }
 
     }
 }
