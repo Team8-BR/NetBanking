@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Server.DataAccessLayer
 {
-    public class AccountFieldDao
+    public class AccountFieldDao : IAccountFieldDao
     {
         public bool AddAccountDetail(AccountFields account)
         {
@@ -144,7 +144,7 @@ namespace Server.DataAccessLayer
             }
 
         }
-        public bool InsertAccountField(AccountField p )
+        public bool InsertAccountField(AccountField p)
         {
             int result = 0;
             try
@@ -154,37 +154,37 @@ namespace Server.DataAccessLayer
                     DbSet<AccountFields> allAccount = db.AccountFields;
                     AccountFields entityModelObject = new AccountFields
                     {
-                            Title = p.Title,
-                            FirstName = p.FirstName,
-                            LastName = p.LastName,
-                            Mobileno = p.Mobileno,
-                            MiddleName = p.MiddleName,
-                            EmailId = p.EmailId,
-                            AadhaarCardNumber = p.AadhaarCardNumber,
-                            Dob = p.Dob,
-                            ReferenceId = p.ReferenceId,
-                            ResidentialAddressLine1 = p.ResidentialAddressLine1,
-                            ResidentialAddressLine2 = p.ResidentialAddressLine2,
-                            ResidentialCity = p.ResidentialCity,
-                            ResidentialLandmark = p.ResidentialLandmark,
-                            ResidentialPincode = p.ResidentialPincode,
-                            ResidentialState = p.ResidentialState,
-                            PermanentAddressLine1 = p.PermanentAddressLine1,
-                            PermanentAddressLine2 = p.PermanentAddressLine2,
-                            PermanentCity = p.PermanentCity,
-                            PermanentLandmark = p.PermanentLandmark,
-                            PermanentPincode = p.PermanentPincode,
-                            PermanentState = p.PermanentState,
-                            AccountNumber = p.AccountNumber,
-                            Occupationdetails = p.Occupationdetails,
-                            OccupationType = p.OccupationType,
-                            Sourceofincome = p.Sourceofincome,
-                            GrossAnnualIncome = p.GrossAnnualIncome,
-                            UserId = p.UserId,
-                            DebitCardNumber = p.DebitCardNumber,
-                            CreditCardNumber = p.CreditCardNumber,
-                            Status = p.Status
-                        
+                        Title = p.Title,
+                        FirstName = p.FirstName,
+                        LastName = p.LastName,
+                        Mobileno = p.Mobileno,
+                        MiddleName = p.MiddleName,
+                        EmailId = p.EmailId,
+                        AadhaarCardNumber = p.AadhaarCardNumber,
+                        Dob = p.Dob,
+                        ReferenceId = p.ReferenceId,
+                        ResidentialAddressLine1 = p.ResidentialAddressLine1,
+                        ResidentialAddressLine2 = p.ResidentialAddressLine2,
+                        ResidentialCity = p.ResidentialCity,
+                        ResidentialLandmark = p.ResidentialLandmark,
+                        ResidentialPincode = p.ResidentialPincode,
+                        ResidentialState = p.ResidentialState,
+                        PermanentAddressLine1 = p.PermanentAddressLine1,
+                        PermanentAddressLine2 = p.PermanentAddressLine2,
+                        PermanentCity = p.PermanentCity,
+                        PermanentLandmark = p.PermanentLandmark,
+                        PermanentPincode = p.PermanentPincode,
+                        PermanentState = p.PermanentState,
+                        AccountNumber = p.AccountNumber,
+                        Occupationdetails = p.Occupationdetails,
+                        OccupationType = p.OccupationType,
+                        Sourceofincome = p.Sourceofincome,
+                        GrossAnnualIncome = p.GrossAnnualIncome,
+                        UserId = p.UserId,
+                        DebitCardNumber = p.DebitCardNumber,
+                        CreditCardNumber = p.CreditCardNumber,
+                        Status = p.Status
+
                     };
                     allAccount.Add(entityModelObject);
                     result = db.SaveChanges();
@@ -195,6 +195,6 @@ namespace Server.DataAccessLayer
             {
                 throw ex;
             }
-        } 
+        }
     }
 }
