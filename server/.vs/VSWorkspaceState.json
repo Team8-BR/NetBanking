@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\BusinessModels",
+    "\\Controllers",
     "\\Data Access Layer",
     "\\EntityModels"
   ],
-  "SelectedNode": "\\EntityModels\\CreditCardCredentials.cs",
+  "SelectedNode": "\\EntityModels\\TransactionDetails.cs",
   "PreviewInSolutionExplorer": false
 }

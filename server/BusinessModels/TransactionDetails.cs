@@ -13,8 +13,7 @@ namespace server.BusinessModels
         public string AccountNumber { get; set; }
         public string TransactionReferenceId { get; set; }
 
-      //  public virtual AccountField AccountNumberNavigation { get; set; }
-        public virtual ModOfTransaction Mode { get; set; }
+       
 
     }
 }
