@@ -9,8 +9,15 @@ namespace server.EntityModels
 {
     public partial class DebitCardCredentials
     {
+        public DebitCardCredentials()
+        {
+            AccountFields = new HashSet<AccountFields>();
+        }
+
         public int DebitCardNumber { get; set; }
         public DateTime DebitCardExpiry { get; set; }
         public int DebitCardCvv { get; set; }
+
+        public virtual ICollection<AccountFields> AccountFields { get; set; }
     }
 }

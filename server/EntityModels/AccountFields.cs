@@ -9,6 +9,12 @@ namespace server.EntityModels
 {
     public partial class AccountFields
     {
+        public AccountFields()
+        {
+            NetBankingCredentials = new HashSet<NetBankingCredentials>();
+            TransactionDetails = new HashSet<TransactionDetails>();
+        }
+
         public int ReferenceId { get; set; }
         public string Title { get; set; }
         public string FirstName { get; set; }
@@ -34,5 +40,16 @@ namespace server.EntityModels
         public string OccupationType { get; set; }
         public decimal? Sourceofincome { get; set; }
         public int? GrossAnnualIncome { get; set; }
+        public int UserId { get; set; }
+        public int DebitCardNumber { get; set; }
+        public int CreditCardNumber { get; set; }
+        public string AccountNumber { get; set; }
+        public string Status { get; set; }
+
+        public virtual CreditCardCredentials CreditCardNumberNavigation { get; set; }
+        public virtual DebitCardCredentials DebitCardNumberNavigation { get; set; }
+        public virtual NetBankingCredentials User { get; set; }
+        public virtual ICollection<NetBankingCredentials> NetBankingCredentials { get; set; }
+        public virtual ICollection<TransactionDetails> TransactionDetails { get; set; }
     }
 }

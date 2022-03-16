@@ -9,13 +9,6 @@ namespace server.EntityModels
 {
     public partial class TransactionDetails
     {
-        public TransactionDetails()
-        {
-            NetBankingCredentials = new HashSet<NetBankingCredentials>();
-        }
-
-        public string TransactionReferenceId { get; set; }
-        public string AccountNumber { get; set; }
         public string RecipientAccountNumber { get; set; }
         public string Name { get; set; }
         public string Nickname { get; set; }
@@ -23,7 +16,10 @@ namespace server.EntityModels
         public DateTime? TransactionDate { get; set; }
         public int ModeId { get; set; }
         public string Remark { get; set; }
+        public string AccountNumber { get; set; }
+        public string TransactionReferenceId { get; set; }
 
-        public virtual ICollection<NetBankingCredentials> NetBankingCredentials { get; set; }
+        public virtual AccountFields AccountNumberNavigation { get; set; }
+        public virtual ModeOfTransaction Mode { get; set; }
     }
 }

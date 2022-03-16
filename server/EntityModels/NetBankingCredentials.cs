@@ -9,11 +9,17 @@ namespace server.EntityModels
 {
     public partial class NetBankingCredentials
     {
+        public NetBankingCredentials()
+        {
+            AccountFields = new HashSet<AccountFields>();
+        }
+
         public int UserId { get; set; }
-        public string NetBankingPassword { get; set; }
-        public string TransactionPassword { get; set; }
+        public int NetBankingPassword { get; set; }
+        public int TransactionPassword { get; set; }
         public string AccountNumber { get; set; }
 
-        public virtual TransactionDetails AccountNumberNavigation { get; set; }
+        public virtual AccountFields AccountNumberNavigation { get; set; }
+        public virtual ICollection<AccountFields> AccountFields { get; set; }
     }
 }

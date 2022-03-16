@@ -9,8 +9,15 @@ namespace server.EntityModels
 {
     public partial class ModeOfTransaction
     {
+        public ModeOfTransaction()
+        {
+            TransactionDetails = new HashSet<TransactionDetails>();
+        }
+
         public int ModeId { get; set; }
         public int Modes { get; set; }
         public string MaturityInstruction { get; set; }
+
+        public virtual ICollection<TransactionDetails> TransactionDetails { get; set; }
     }
 }
