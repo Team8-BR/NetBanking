@@ -5721,24 +5721,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sunil\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\MANINEDU\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\My Work\\Project\\server\\server.csproj",
+      "projectUniqueName": "E:\\MY DOCUMENTS\\Project Gladiator\\NetBanking\\server\\server.csproj",
       "projectName": "server",
-      "projectPath": "D:\\My Work\\Project\\server\\server.csproj",
-      "packagesPath": "C:\\Users\\sunil\\.nuget\\packages\\",
-      "outputPath": "D:\\My Work\\Project\\server\\obj\\",
+      "projectPath": "E:\\MY DOCUMENTS\\Project Gladiator\\NetBanking\\server\\server.csproj",
+      "packagesPath": "C:\\Users\\MANINEDU\\.nuget\\packages\\",
+      "outputPath": "E:\\MY DOCUMENTS\\Project Gladiator\\NetBanking\\server\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sunil\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\MANINEDU\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5785,12 +5780,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.22, 3.1.22]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
