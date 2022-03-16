@@ -73,6 +73,7 @@ alter table TransactionDetails add constraint fkey_modeID foreign key(ModeID) re
 alter table TransactionDetails add TransactionReferenceID varchar(20) Primary key not null	
 alter table AccountFields add AccountNumber varchar(20) primary key not null	
 alter table AccountFields add Status varchar(20) not null	
+alter table AccountFields add AccountBalance decimal(18,2) not null
 
 Create table AdminDetails
 (
