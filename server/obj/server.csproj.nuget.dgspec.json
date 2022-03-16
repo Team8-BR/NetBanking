@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\My Work\\Net Banking Project\\NetBanking\\server\\server.csproj": {}
+    "D:\\My Work\\Project\\server\\server.csproj": {}
   },
   "projects": {
-    "D:\\My Work\\Net Banking Project\\NetBanking\\server\\server.csproj": {
+    "D:\\My Work\\Project\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\My Work\\Net Banking Project\\NetBanking\\server\\server.csproj",
+        "projectUniqueName": "D:\\My Work\\Project\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "D:\\My Work\\Net Banking Project\\NetBanking\\server\\server.csproj",
+        "projectPath": "D:\\My Work\\Project\\server\\server.csproj",
         "packagesPath": "C:\\Users\\sunil\\.nuget\\packages\\",
-        "outputPath": "D:\\My Work\\Net Banking Project\\NetBanking\\server\\obj\\",
+        "outputPath": "D:\\My Work\\Project\\server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
