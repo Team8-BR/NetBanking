@@ -5,12 +5,12 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace server.Repository
+namespace server.EntityModels
 {
-    public partial class DebitCardCredentials
+    public partial class ModeOfTransaction
     {
-        public int DebitCardNumber { get; set; }
-        public DateTime DebitCardExpiry { get; set; }
-        public int DebitCardCvv { get; set; }
+        public int ModeId { get; set; }
+        public int Modes { get; set; }
+        public string MaturityInstruction { get; set; }
     }
 }

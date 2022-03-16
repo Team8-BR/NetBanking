@@ -5,7 +5,7 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace server.Repository
+namespace server.EntityModels
 {
     public partial class NetBankingCredentials
     {
