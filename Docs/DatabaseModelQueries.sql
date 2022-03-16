@@ -64,6 +64,10 @@ TransactionDate	datetime,
 ModeID int not null,
 Remark	varchar(120)
 )
+alter table AccountFields add constraint fkey_Accno foreign key(AccountNumber) references  TransactionDetails(AccountNumber)
+alter table AccountFields add constraint fkey_CreditcardAccDetails foreign key(CreditcardNumber) references  CreditcardCredentials(CreditcardNumber)
+alter table AccountFields add constraint fkey_DebitcardAccDetails foreign key(DebitcardNumber) references  DebitcardCredentials(DebitcardNumber)
+alter table AccountFields add constraint fkey_UserID foreign key(UserID) references  NetBankingCredentials(UserID)
 alter table NetBankingCredentials add constraint fkey_Net_Accno foreign key(AccountNumber) references  TransactionDetails(AccountNumber)
 alter table NetBankingCredentials add AccountNumber	varchar(20) not null	
 
@@ -87,6 +91,7 @@ begin
 select TransactionReferenceID,AccountNumber,RecipientAccountNumber,Name,Transactionamount,TransactionDate,ModeID,Remark from
 TransactionDetails where AccountNumber=@AccountNumber
 end
+
 create proc InternetBanking
 @UserID int,
 @NetbankingPassword int,
