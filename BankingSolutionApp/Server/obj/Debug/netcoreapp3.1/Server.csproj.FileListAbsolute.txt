@@ -1,0 +1,120 @@
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\appsettings.json
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.exe
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.pdb
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.csproj.AssemblyReference.cache
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.MvcApplicationPartsAssemblyInfo.cache
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\staticwebassets\Server.StaticWebAssets.Manifest.cache
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.RazorTargetAssemblyInfo.cache
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.csproj.CopyComplete
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.dll
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.pdb
+D:\My Work\Net Banking Project\NetBanking\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\appsettings.json
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.exe
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Server.pdb
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\My Work\Project\BankingSolutionApp\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.csproj.AssemblyReference.cache
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.MvcApplicationPartsAssemblyInfo.cache
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\staticwebassets\Server.StaticWebAssets.Manifest.cache
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.RazorTargetAssemblyInfo.cache
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.csproj.CopyComplete
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.dll
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.pdb
+D:\My Work\Project\BankingSolutionApp\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
