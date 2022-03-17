@@ -7,11 +7,15 @@ namespace Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountFieldController : ControllerBase
+    public class AccountsController : ControllerBase
     {
-        
+        private IAccountFieldDao _accountFieldDao;
 
-       
+        public AccountsController(IAccountFieldDao accountFieldDao)
+        {
+            _accountFieldDao = accountFieldDao;
+        }
+
         [HttpGet]
         public IActionResult GetAllAccountDetails()
         {
