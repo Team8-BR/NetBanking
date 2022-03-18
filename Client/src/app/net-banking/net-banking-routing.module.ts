@@ -9,10 +9,10 @@ import { UserPageComponent } from "./user-page/user-page.component";
 
 const AppRoutes : Routes = [
     {path : '', component : HomePageComponent},
-    {path : 'Login', component : LoginComponent},
-    {path : 'Register', component : RegistrationComponent},
+    {path : 'login', component : LoginComponent },
+    {path : 'register', component : RegistrationComponent},
     {path : 'CreateAccount', component : CreateAccountComponent},
-    {path : 'Dashboard', component : UserPageComponent}
+    {path : 'Dashboard', component : UserPageComponent,outlet : "home"}
 ]
 
 

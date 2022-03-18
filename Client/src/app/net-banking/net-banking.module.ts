@@ -32,6 +32,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [],
   bootstrap: [],
-  exports : [CreateAccountComponent]
+  exports : [HomePageComponent]
 })
 export class NetBankingModule { }
