@@ -12,9 +12,11 @@ import { NetBankingModule } from './net-banking/net-banking.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent
+ 
     
   
   ],

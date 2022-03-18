@@ -4,6 +4,8 @@ import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { RouterModule } from '@angular/router';
 import { UserPageComponent } from './user-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { UserPageComponent } from './user-page.component';
       UserPageComponent,
     AccountStatementComponent,
     FundTransferComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    NavbarComponent,
+
  
   ],
   imports: [RouterModule
