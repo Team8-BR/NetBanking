@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+
 import { Observable } from 'rxjs';
 import { Account } from '../Models/Account';
 import { AccountService } from '../services/account.service';
@@ -8,7 +10,10 @@ import { AccountService } from '../services/account.service';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-export class AdminComponent implements OnInit {
+export class AdminComponent  implements OnInit{
+
+
+
 
   Accounts? : Account[]  
   constructor(private _as : AccountService) { }
