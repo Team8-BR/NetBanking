@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { NetBankingRoutingModule } from './net-banking-routing.module';
 import { UserPageModule } from './user-page/user-page.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegistrationComponent,
     HomePageComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    AdminComponent
 
 
     

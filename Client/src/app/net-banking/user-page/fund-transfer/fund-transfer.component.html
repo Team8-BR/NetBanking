@@ -1,1 +1,204 @@
-<p>fund-transfer works!</p>
+                    <h2>Add a Payee</h2>
+<br>
+                     <h2>Add Beneficiary</h2>
+
+<form [formGroup]="Beneficiaryinfo">
+    <div class="form-group">
+        <label for="beneficiaryname">BeneficiaryName:&nbsp;</label>
+        <input type="text" class="form-control" name="beneficiaryname" id="beneficiaryname" formControlName="beneficiaryname">
+    </div>
+    <div [hidden]="Beneficiaryinfo.controls['beneficiaryname'].valid || Beneficiaryinfo.controls['beneficiaryname'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="Beneficiaryinfo.controls['beneficiaryname'].errors?.['required']">
+            BeneficiaryName is required
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="beneficiaryaccountnumber">BeneficiaryAccountNumber:&nbsp;</label>
+        <input type="number" class="form-control" name="beneficiaryaccountnumber" id="beneficiaryaccountnumber" formControlName="beneficiaryaccountnumber">
+    </div>
+    <div [hidden]="Beneficiaryinfo.controls['beneficiaryaccountnumber'].valid || Beneficiaryinfo.controls['beneficiaryaccountnumber'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="Beneficiaryinfo.controls['beneficiaryaccountnumber'].errors?.['required']">
+            BeneficiaryAccountNumber is required
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="re-enteraccountnumber">Re-EnterAccountNumber:&nbsp;</label>
+        <input type="number" class="form-control" name="re-enteraccountnumber" id="re-enteraccountnumber" formControlName="re-enteraccountnumber">
+    </div>
+    <div [hidden]="Beneficiaryinfo.controls['re-enteraccountnumber'].valid || Beneficiaryinfo.controls['re-enteraccountnumber'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="Beneficiaryinfo.controls['re-enteraccountnumber'].errors?.['required']">
+            Re-EnterAccountNumber!!!
+        </div>
+    </div>
+    <input type="checkbox" name="savebeneficiary" value="savebeneficiary" >
+    <div class="form-group">
+        <label for="nickname">NickName:&nbsp;</label>
+        <input type="number" class="form-control" name="nickname" id="nickname" formControlName="nickname">
+    </div>
+    <button type="submit">Save as Beneficiary</button>
+    <br>
+    <br>
+    <br>
+    <br>
+</form>
+    <h2>IMPS PAYMENT</h2>
+<form [formGroup]="IMPSpaymentinfo">
+    <div class="form-group">
+        <label for="fromaccount">FromAccount:&nbsp;</label>
+        <input type="number" class="form-control" name="fromaccount" id="fromaccount" formControlName="fromaccount">
+    </div>
+    <div [hidden]="IMPSpaymentinfo.controls['fromaccount'].valid || Beneficiaryinfo.controls['fromaccount'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="Beneficiaryinfo.controls['fromaccount'].errors?.['required']">
+            AccountNumber is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Toaccount">ToAccount:&nbsp;</label>
+        <input type="number" class="form-control" name="Toaccount" id="Toaccount" formControlName="Toaccount"><button type="submit">Add New+</button>
+    </div>
+    <div [hidden]="IMPSpaymentinfo.controls['Toaccount'].valid || Beneficiaryinfo.controls['Toaccount'].pristine"
+       class="alert alert-danger">
+      <div *ngIf="Beneficiaryinfo.controls['Toaccount'].errors?.['required']">
+        AccountNumber is required.
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="amount">Amount:&nbsp;</label>
+        <input type="text" class="form-control" name="amount" id="amount" formControlName="amount">
+    </div>
+    <div [hidden]="IMPSpaymentinfo.controls['amount'].valid || Beneficiaryinfo.controls['amount'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="Beneficiaryinfo.controls['amount'].errors?.['required']">
+            Enter the Amount!!!!.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="recepientmobilenumber">RecepientMobileNumber:&nbsp;</label>
+        <input type="text" class="form-control" name="recepientmobilenumber" id="recepientmobilenumber" formControlName="recepientmobilenumber">
+    </div>
+    <div [hidden]="IMPSpaymentinfo.controls['recepientmobilenumber'].valid || Beneficiaryinfo.controls['recepientmobilenumber'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="Beneficiaryinfo.controls['recepientmobilenumber'].errors?.['required']">
+          Enter the Mobile Number!!!!.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="transactiondate">TransactionDate:&nbsp;</label>
+        <input type="text" class="form-control" name="transactiondate" id="transactiondate" formControlName="transactiondate">
+    </div>
+    <div class="form-group">
+        <label for="maturityinstructions">MaturityInstructions:&nbsp;</label>
+        <input type="text" class="form-control" name="maturityinstructions" id="maturityinstructions" formControlName="maturityinstructions">
+    </div>
+    <div class="form-group">
+        <label for="remarks">Remarks:&nbsp;</label>
+        <input type="text" class="form-control" name="remarks" id="remarks" formControlName="remarks">
+    </div>
+    <button type="submit">Save</button><button type="submit">Reset</button><button type="submit">Save As Template</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit">Continue</button>
+    <br>
+    <br>
+    <br>
+</form>
+<h2>NEFT PAYMENT</h2>
+<form [formGroup]="NEFTpaymentinfo">
+    <div class="form-group">
+        <label for="fromaccount">FromAccount:&nbsp;</label>
+        <input type="number" class="form-control" name="fromaccount" id="fromaccount" formControlName="fromaccount">
+    </div>
+    <div [hidden]="NEFTpaymentinfo.controls['fromaccount'].valid || Beneficiaryinfo.controls['fromaccount'].pristine"
+          class="alert alert-danger">
+        <div *ngIf="Beneficiaryinfo.controls['fromaccount'].errors?.['required']">
+          AccountNumber is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Toaccount">ToAccount:&nbsp;</label>
+        <input type="number" class="form-control" name="Toaccount" id="Toaccount" formControlName="Toaccount"><button type="submit">Add New+</button>
+    </div>
+    <div [hidden]="NEFTpaymentinfo.controls['Toaccount'].valid || Beneficiaryinfo.controls['Toaccount'].pristine"
+      class="alert alert-danger">
+       <div *ngIf="Beneficiaryinfo.controls['Toaccount'].errors?.['required']">
+         AccountNumber is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="amount">Amount:&nbsp;</label>
+        <input type="text" class="form-control" name="amount" id="amount" formControlName="amount">
+    </div>
+
+    <div [hidden]="NEFTpaymentinfo.controls['amount'].valid || Beneficiaryinfo.controls['amount'].pristine"
+     class="alert alert-danger">
+       <div *ngIf="Beneficiaryinfo.controls['amount'].errors?.['required']">
+         Enter the Amount!!!!.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="transactiondate">TransactionDate:&nbsp;</label>
+        <input type="text" class="form-control" name="transactiondate" id="transactiondate" formControlName="transactiondate">
+    </div>
+    <div class="form-group">
+        <label for="remarks">Remarks:&nbsp;</label>
+        <input type="text" class="form-control" name="remarks" id="remarks" formControlName="remarks">
+    </div>
+    <div>
+        <h2>
+            Please note:
+
+            1.Transaction will be executed on next working day if they are sheduled for Sundays,NationalHolidays,NEFT Holidays(As Declared by RBI).
+            2.Timings for NEFT:Monday-Saturday(except 2nd and 4th saturday)6.00AM to 6.30PM.
+        </h2>
+    </div>
+    <button type="submit">Save</button><button type="submit">Reset</button><button type="submit">Save As Template</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit">Continue</button>
+    <br>
+    <br>
+    <br>
+</form>
+<h2>RTGS PAYMENT</h2>
+<form [formGroup]="RTGSpaymentinfo">
+    <div class="form-group">
+        <label for="fromaccount">FromAccount:&nbsp;</label>
+        <input type="number" class="form-control" name="fromaccount" id="fromaccount" formControlName="fromaccount">
+    </div>
+    <div [hidden]="RTGSpaymentinfo.controls['fromaccount'].valid || Beneficiaryinfo.controls['fromaccount'].pristine"
+        class="alert alert-danger">
+      <div *ngIf="Beneficiaryinfo.controls['fromaccount'].errors?.['required']">
+        AccountNumber is required.
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="Toaccount">ToAccount:&nbsp;</label>
+        <input type="number" class="form-control" name="Toaccount" id="Toaccount" formControlName="Toaccount"><button type="submit">Add New+</button>
+    </div>
+    <div [hidden]="NEFTpaymentinfo.controls['Toaccount'].valid || Beneficiaryinfo.controls['Toaccount'].pristine"
+       class="alert alert-danger">
+        <div *ngIf="Beneficiaryinfo.controls['Toaccount'].errors?.['required']">
+          AccountNumber is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="amount">Amount:&nbsp;</label>
+        <input type="text" class="form-control" name="amount" id="amount" formControlName="amount">
+    </div>
+    <div [hidden]="NEFTpaymentinfo.controls['amount'].valid || Beneficiaryinfo.controls['amount'].pristine"
+     class="alert alert-danger">
+       <div *ngIf="Beneficiaryinfo.controls['amount'].errors?.['required']">
+         Enter the Amount!!!!.
+       </div>
+    </div>
+    <div class="form-group">
+        <label for="transactiondate">TransactionDate:&nbsp;</label>
+        <input type="text" class="form-control" name="transactiondate" id="transactiondate" formControlName="transactiondate">
+    </div>
+    <div class="form-group">
+        <label for="remarks">Remarks:&nbsp;</label>
+        <input type="text" class="form-control" name="remarks" id="remarks" formControlName="remarks">
+    </div>
+    <br>
+    <br>
+    <button type="submit">Save</button><button type="submit">Reset</button><button type="submit">Save As Template</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit">Continue</button>
+
+</form>

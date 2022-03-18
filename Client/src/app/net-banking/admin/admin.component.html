@@ -1,11 +1,31 @@
-<br>
-<div>
-    <h4>Login to your Admin Account</h4><br>
-    <form>
-        <label for="userId">User ID </label> &nbsp;
-        <input name="userId" type="text" /><br><br>
-        <label for="Password">Password </label>&nbsp;
-        <input name="Password" type="password" /><br><br>
-        <button type="submit" >Login</button><br><br>
-    </form>
-</div>
+<form [formGroup]="Adminform" (ngSubmit)="submitData()">
+    <div class="form-group">
+        <label for="adminid">AdminId:&nbsp;</label>
+        <input type="email" class="form-control" name="adminid" id="adminid" formControlName="adminid">
+    </div>
+    <div [hidden]="Adminform.controls['adminid'].valid || Adminform.controls['adminid'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="Adminform.controls['adminid'].errors?.['required']">
+            AdminId is required
+        </div>
+        <div *ngIf="Adminform.controls['adminid'].errors?.['email']">
+            AdminId must be an email id
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password:&nbsp;</label>
+        <input type="password" class="form-control" name="password" id="password" formControlName="password">
+    </div>
+    <div [hidden]="Adminform.controls['password'].valid || Adminform.controls['password'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="loginform.controls['password'].errors?.['required']">
+            Password is required
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="submitDiv">
+        <button type="submit">Submit</button>
+    </div>
+</form>
