@@ -2,6 +2,8 @@
 <div>
     <h4>Login to your Account</h4><br>
     <form>
+        <input type="radio" name="radioCalc" id="radioAdd"  (change)="saveSelection(1)" >&nbsp;User&nbsp;&nbsp;
+        <input type="radio" name="radioCalc" id="radioSub"  (change)="saveSelection(2)" >&nbsp;Admin<br>
         <label for="userId">User ID </label> &nbsp;
         <input name="userId" type="text" /><br><br>
         <label for="Password">Password </label>&nbsp;

@@ -7,10 +7,24 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  choice = 0
   constructor(private router: Router) { }
   ngOnInit(): void {
   }
-  login(){
-    this.router.navigateByUrl('/user');
+  saveSelection(choice: number) {
+    this.choice = choice
+  }
+
+  
+  login() {
+    switch (this.choice) {
+      case 1:
+        this.router.navigateByUrl("/user");
+        break;
+
+      case 2:
+        this.router.navigateByUrl("/admin");
+        break;
+    }
   }
 }
