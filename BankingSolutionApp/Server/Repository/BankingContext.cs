@@ -21,10 +21,8 @@ namespace Server.Repository
 
         public virtual DbSet<AccountFields> AccountFields { get; set; }
         public virtual DbSet<AdminDetails> AdminDetails { get; set; }
-        public virtual DbSet<CreditCardCredentials> CreditCardCredentials { get; set; }
-        public virtual DbSet<DebitCardCredentials> DebitCardCredentials { get; set; }
+        public virtual DbSet<BankCredentials> BankCredentials { get; set; }
         public virtual DbSet<ModeOfTransaction> ModeOfTransaction { get; set; }
-        public virtual DbSet<NetBankingCredentials> NetBankingCredentials { get; set; }
         public virtual DbSet<TransactionDetails> TransactionDetails { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -32,7 +30,7 @@ namespace Server.Repository
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("server=SKCJPC;database=Banking;integrated security=true");
+                optionsBuilder.UseSqlServer("server=SKCJPC;database=Banking;integrated security=true;");
             }
         }
 
@@ -40,17 +38,12 @@ namespace Server.Repository
         {
             modelBuilder.Entity<AccountFields>(entity =>
             {
-                entity.HasKey(e => e.AccountNumber)
-                    .HasName("PK__AccountF__BE2ACD6EF8089836");
+                entity.HasKey(e => e.CustomerId)
+                    .HasName("PK__AccountF__A4AE64B899050B2D");
 
-                entity.Property(e => e.AccountNumber)
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+                entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
 
-                entity.Property(e => e.AadhaarCardNumber)
-                    .IsRequired()
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+                entity.Property(e => e.CredentialId).HasColumnName("CredentialID");
 
                 entity.Property(e => e.Dob)
                     .HasColumnName("DOB")
@@ -67,17 +60,14 @@ namespace Server.Repository
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
+                entity.Property(e => e.GrossAnnualIncome).HasColumnType("decimal(18, 2)");
+
                 entity.Property(e => e.LastName)
                     .IsRequired()
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
                 entity.Property(e => e.MiddleName)
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Mobileno)
-                    .IsRequired()
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
@@ -106,19 +96,10 @@ namespace Server.Repository
                     .HasMaxLength(120)
                     .IsUnicode(false);
 
-                entity.Property(e => e.PermanentPincode)
-                    .IsRequired()
-                    .HasMaxLength(120)
-                    .IsUnicode(false);
-
                 entity.Property(e => e.PermanentState)
                     .IsRequired()
                     .HasMaxLength(120)
                     .IsUnicode(false);
-
-                entity.Property(e => e.ReferenceId)
-                    .HasColumnName("ReferenceID")
-                    .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.ResidentialAddressLine1)
                     .HasMaxLength(120)
@@ -137,21 +118,17 @@ namespace Server.Repository
                     .HasMaxLength(120)
                     .IsUnicode(false);
 
-                entity.Property(e => e.ResidentialPincode)
-                    .IsRequired()
-                    .HasMaxLength(120)
-                    .IsUnicode(false);
-
                 entity.Property(e => e.ResidentialState)
                     .IsRequired()
                     .HasMaxLength(120)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Sourceofincome).HasColumnType("money");
+                entity.Property(e => e.Sourceofincome)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Status)
-                    .IsRequired()
-                    .HasMaxLength(20)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Title)
@@ -159,25 +136,17 @@ namespace Server.Repository
                     .HasMaxLength(5)
                     .IsUnicode(false);
 
-                entity.Property(e => e.UserId).HasColumnName("UserID");
+                entity.Property(e => e.TransactionReferenceId).HasColumnName("TransactionReferenceID");
 
-                entity.HasOne(d => d.CreditCardNumberNavigation)
+                entity.HasOne(d => d.Credential)
                     .WithMany(p => p.AccountFields)
-                    .HasForeignKey(d => d.CreditCardNumber)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fkey_CreditcardAccDetails");
+                    .HasForeignKey(d => d.CredentialId)
+                    .HasConstraintName("fkey_credID");
 
-                entity.HasOne(d => d.DebitCardNumberNavigation)
+                entity.HasOne(d => d.TransactionReference)
                     .WithMany(p => p.AccountFields)
-                    .HasForeignKey(d => d.DebitCardNumber)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fkey_DebitcardAccDetails");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.AccountFields)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fkey_UserIDAccDetails");
+                    .HasForeignKey(d => d.TransactionReferenceId)
+                    .HasConstraintName("fkey_TransRefID");
             });
 
             modelBuilder.Entity<AdminDetails>(entity =>
@@ -194,28 +163,20 @@ namespace Server.Repository
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<CreditCardCredentials>(entity =>
+            modelBuilder.Entity<BankCredentials>(entity =>
             {
-                entity.HasKey(e => e.CreditCardNumber)
-                    .HasName("PK__CreditCa__315DB924005F4CE5");
+                entity.HasKey(e => e.CredentialId)
+                    .HasName("PK__BankCred__2C58F9EC971AE52C");
 
-                entity.Property(e => e.CreditCardNumber).ValueGeneratedNever();
+                entity.Property(e => e.CredentialId).HasColumnName("CredentialID");
 
-                entity.Property(e => e.CreditCardCvv).HasColumnName("CreditCardCVV");
+                entity.Property(e => e.AccountBalance).HasColumnType("decimal(18, 2)");
 
                 entity.Property(e => e.CreditCardExpiry).HasColumnType("date");
-            });
-
-            modelBuilder.Entity<DebitCardCredentials>(entity =>
-            {
-                entity.HasKey(e => e.DebitCardNumber)
-                    .HasName("PK__DebitCar__136D27858053C5B5");
-
-                entity.Property(e => e.DebitCardNumber).ValueGeneratedNever();
-
-                entity.Property(e => e.DebitCardCvv).HasColumnName("DebitCardCVV");
 
                 entity.Property(e => e.DebitCardExpiry).HasColumnType("date");
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
             });
 
             modelBuilder.Entity<ModeOfTransaction>(entity =>
@@ -228,45 +189,17 @@ namespace Server.Repository
                     .ValueGeneratedNever();
 
                 entity.Property(e => e.MaturityInstruction)
-                    .HasMaxLength(1)
-                    .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<NetBankingCredentials>(entity =>
-            {
-                entity.HasKey(e => e.UserId)
-                    .HasName("PK__NetBanki__1788CCACEDD9F6C3");
-
-                entity.Property(e => e.UserId)
-                    .HasColumnName("UserID")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.AccountNumber)
                     .IsRequired()
-                    .HasMaxLength(20)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.HasOne(d => d.AccountNumberNavigation)
-                    .WithMany(p => p.NetBankingCredentials)
-                    .HasForeignKey(d => d.AccountNumber)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fkey_Net_Accno");
             });
 
             modelBuilder.Entity<TransactionDetails>(entity =>
             {
                 entity.HasKey(e => e.TransactionReferenceId)
-                    .HasName("PK__Transact__D119548104773AFC");
+                    .HasName("PK__Transact__D119548170B2974D");
 
-                entity.Property(e => e.TransactionReferenceId)
-                    .HasColumnName("TransactionReferenceID")
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.AccountNumber)
-                    .IsRequired()
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+                entity.Property(e => e.TransactionReferenceId).HasColumnName("TransactionReferenceID");
 
                 entity.Property(e => e.ModeId).HasColumnName("ModeID");
 
@@ -279,24 +212,13 @@ namespace Server.Repository
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.RecipientAccountNumber)
-                    .IsRequired()
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
-
                 entity.Property(e => e.Remark)
                     .HasMaxLength(120)
                     .IsUnicode(false);
 
                 entity.Property(e => e.TransactionDate).HasColumnType("datetime");
 
-                entity.Property(e => e.Transactionamount).HasColumnType("money");
-
-                entity.HasOne(d => d.AccountNumberNavigation)
-                    .WithMany(p => p.TransactionDetails)
-                    .HasForeignKey(d => d.AccountNumber)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fkey_Accno");
+                entity.Property(e => e.Transactionamount).HasColumnType("decimal(18, 2)");
 
                 entity.HasOne(d => d.Mode)
                     .WithMany(p => p.TransactionDetails)

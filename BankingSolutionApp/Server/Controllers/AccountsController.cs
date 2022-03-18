@@ -19,8 +19,8 @@ namespace Server.Controllers
         [HttpGet]
         public IActionResult GetAllAccountDetails()
         {
-            AccountFieldDao accountFieldDao = new AccountFieldDao();
-            var fetchedData = accountFieldDao.FetchAllAccount();
+           
+            var fetchedData = _accountFieldDao.FetchAllAccount();
             return this.Ok(fetchedData);
         }
 

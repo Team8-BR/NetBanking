@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CreateAccountComponent } from './net-banking/create-account/create-account.component';
+
+
 
 
 import { NetBankingModule } from './net-banking/net-banking.module';
@@ -13,10 +14,7 @@ import { NetBankingModule } from './net-banking/net-banking.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CreateAccountComponent
-    
-    
+    AppComponent
     
   
   ],

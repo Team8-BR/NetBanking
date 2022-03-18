@@ -9,17 +9,22 @@ namespace Server.Repository
 {
     public partial class TransactionDetails
     {
-        public string RecipientAccountNumber { get; set; }
+        public TransactionDetails()
+        {
+            AccountFields = new HashSet<AccountFields>();
+        }
+
         public string Name { get; set; }
         public string Nickname { get; set; }
-        public decimal? Transactionamount { get; set; }
         public DateTime? TransactionDate { get; set; }
         public int ModeId { get; set; }
         public string Remark { get; set; }
-        public string AccountNumber { get; set; }
-        public string TransactionReferenceId { get; set; }
+        public long AccountNumber { get; set; }
+        public decimal Transactionamount { get; set; }
+        public long RecipientAccountNumber { get; set; }
+        public int TransactionReferenceId { get; set; }
 
-        public virtual AccountFields AccountNumberNavigation { get; set; }
         public virtual ModeOfTransaction Mode { get; set; }
+        public virtual ICollection<AccountFields> AccountFields { get; set; }
     }
 }

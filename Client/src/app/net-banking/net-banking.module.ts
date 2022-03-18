@@ -12,6 +12,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule } from '@angular/router';
 import { NetBankingRoutingModule } from './net-banking-routing.module';
 import { UserPageModule } from './user-page/user-page.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,16 +22,16 @@ import { UserPageModule } from './user-page/user-page.module';
     LoginComponent,
     RegistrationComponent,
     HomePageComponent,
-    CreateAccountComponent,
+    CreateAccountComponent
 
 
     
   ],
-  imports: [RouterModule,NetBankingRoutingModule,UserPageModule
+  imports: [RouterModule,NetBankingRoutingModule,UserPageModule,FormsModule,ReactiveFormsModule
     
   ],
   providers: [],
   bootstrap: [],
-  exports : [LoginComponent]
+  exports : [CreateAccountComponent]
 })
 export class NetBankingModule { }

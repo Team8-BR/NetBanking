@@ -53,7 +53,7 @@ namespace Server.DataAccessLayer
                                          EmailId = a.EmailId,
                                          AadhaarCardNumber = a.AadhaarCardNumber,
                                          Dob = a.Dob,
-                                         ReferenceId = a.ReferenceId,
+                                         
                                          ResidentialAddressLine1 = a.ResidentialAddressLine1,
                                          ResidentialAddressLine2 = a.ResidentialAddressLine2,
                                          ResidentialCity = a.ResidentialCity,
@@ -66,17 +66,15 @@ namespace Server.DataAccessLayer
                                          PermanentLandmark = a.PermanentLandmark,
                                          PermanentPincode = a.PermanentPincode,
                                          PermanentState = a.PermanentState,
-                                         AccountNumber = a.AccountNumber,
+
                                          Occupationdetails = a.Occupationdetails,
                                          OccupationType = a.OccupationType,
                                          Sourceofincome = a.Sourceofincome,
                                          GrossAnnualIncome = a.GrossAnnualIncome,
-                                         UserId = a.UserId,
-                                         DebitCardNumber = a.DebitCardNumber,
-                                         CreditCardNumber = a.CreditCardNumber,
+
                                          Status = a.Status
                                      }
-                             )
+                             ) 
                              .ToList<AccountField>();
 
                     }
@@ -96,7 +94,7 @@ namespace Server.DataAccessLayer
                 using (var db = new BankingContext())
                 {
                     DbSet<AccountFields> alldetails = db.AccountFields;
-                    var matchingAccount = alldetails.Where(p => p.ReferenceId == id);
+                    var matchingAccount = alldetails.Where(p => p.CustomerId == id);
                     if (matchingAccount != null && matchingAccount.Count() > 0)
                     {
                         AccountFields p = matchingAccount.First<AccountFields>();
@@ -111,7 +109,7 @@ namespace Server.DataAccessLayer
                             EmailId = p.EmailId,
                             AadhaarCardNumber = p.AadhaarCardNumber,
                             Dob = p.Dob,
-                            ReferenceId = p.ReferenceId,
+                          
                             ResidentialAddressLine1 = p.ResidentialAddressLine1,
                             ResidentialAddressLine2 = p.ResidentialAddressLine2,
                             ResidentialCity = p.ResidentialCity,
@@ -124,14 +122,12 @@ namespace Server.DataAccessLayer
                             PermanentLandmark = p.PermanentLandmark,
                             PermanentPincode = p.PermanentPincode,
                             PermanentState = p.PermanentState,
-                            AccountNumber = p.AccountNumber,
+                         
                             Occupationdetails = p.Occupationdetails,
                             OccupationType = p.OccupationType,
                             Sourceofincome = p.Sourceofincome,
                             GrossAnnualIncome = p.GrossAnnualIncome,
-                            UserId = p.UserId,
-                            DebitCardNumber = p.DebitCardNumber,
-                            CreditCardNumber = p.CreditCardNumber,
+                           
                             Status = p.Status
                         };
                     }
@@ -162,7 +158,7 @@ namespace Server.DataAccessLayer
                         EmailId = p.EmailId,
                         AadhaarCardNumber = p.AadhaarCardNumber,
                         Dob = p.Dob,
-                        ReferenceId = p.ReferenceId,
+                       
                         ResidentialAddressLine1 = p.ResidentialAddressLine1,
                         ResidentialAddressLine2 = p.ResidentialAddressLine2,
                         ResidentialCity = p.ResidentialCity,
@@ -175,14 +171,12 @@ namespace Server.DataAccessLayer
                         PermanentLandmark = p.PermanentLandmark,
                         PermanentPincode = p.PermanentPincode,
                         PermanentState = p.PermanentState,
-                        AccountNumber = p.AccountNumber,
+                       
                         Occupationdetails = p.Occupationdetails,
                         OccupationType = p.OccupationType,
                         Sourceofincome = p.Sourceofincome,
                         GrossAnnualIncome = p.GrossAnnualIncome,
-                        UserId = p.UserId,
-                        DebitCardNumber = p.DebitCardNumber,
-                        CreditCardNumber = p.CreditCardNumber,
+                       
                         Status = p.Status
 
                     };

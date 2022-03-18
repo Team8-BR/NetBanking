@@ -10,7 +10,7 @@ import {  FormBuilder,FormGroup,Validators } from '@angular/forms';
   
 export class CreateAccountComponent implements OnInit {
 
-  login =FormGroup=this._fb.group({    
+  login :FormGroup=this._fb.group({    
       Title:['', [Validators.required] ],
 
       FirstName:['',[Validators.required]],
