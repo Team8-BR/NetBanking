@@ -13,6 +13,11 @@ import { RouterModule } from '@angular/router';
 import { NetBankingRoutingModule } from './net-banking-routing.module';
 import { UserPageModule } from './user-page/user-page.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AccountService } from './services/account.service';
+import { CommonModule } from '@angular/common';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -22,15 +27,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegistrationComponent,
     HomePageComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    AdminNavbarComponent,
+    AdminComponent
 
 
     
   ],
-  imports: [RouterModule,NetBankingRoutingModule,UserPageModule,FormsModule,ReactiveFormsModule
+  imports: [RouterModule,NetBankingRoutingModule,UserPageModule,FormsModule,ReactiveFormsModule,HttpClientModule,CommonModule
     
   ],
-  providers: [],
+  providers: [AccountService],
   bootstrap: [],
   exports : [HomePageComponent]
 })

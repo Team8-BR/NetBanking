@@ -1,11 +1,28 @@
-<br>
-<div>
-    <h4>Login to your Admin Account</h4><br>
-    <form>
-        <label for="userId">User ID </label> &nbsp;
-        <input name="userId" type="text" /><br><br>
-        <label for="Password">Password </label>&nbsp;
-        <input name="Password" type="password" /><br><br>
-        <button type="submit" >Login</button><br><br>
-    </form>
+<div class="container">
+
+    <div class="table-responsive">
+
+        <table class="table" *ngIf="Accounts && Accounts.length>0; else alternate">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of Accounts">
+                    <td>{{a.customerId}}</td>
+                    <td>{{a.firstName}}</td>
+                    <td>{{a.lastName}}</td>
+                    <td>{{a.aadhaarCardNumber}}</td>
+                    <td>{{a.sourceofincome}}</td>
+                    <td>{{a.status}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
+<ng-template #alternate>
+    <span>No records found</span>
+</ng-template>

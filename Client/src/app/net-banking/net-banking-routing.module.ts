@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AdminComponent } from "./admin/admin.component";
 import { CreateAccountComponent } from "./create-account/create-account.component";
 import { HomePageComponent } from "./home-page/home-page.component";
 import { LoginComponent } from "./login/login.component";
@@ -23,7 +24,8 @@ const AppRoutes : Routes = [
             {path : 'statement', component : AccountStatementComponent},
             {path : 'profile', component : AccountDetailsComponent},
             {path : 'transaction', component : FundTransferComponent}
-        ]}
+        ]},
+    {path : 'admin', component : AdminComponent},
     
 ]
 

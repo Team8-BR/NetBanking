@@ -1,12 +1,17 @@
 
-
-
 <br>
 <div>
-    <h4>Login to your Account</h4>
-    <form>
+    <h4>Register your Account for Net Banking</h4><br/>
+    <form [formGroup]="registration">
         <label for="AccountNumber">Account Number</label> &nbsp;
         <input name="AccountNumber" type="text" /><br><br>
+        <div [hidden]="registration.controls['AccountNumber'].valid || registration.controls['AccountNumber'].pristine"
+            class="alert alert-danger">
+            <div *ngIf="registration.controls['AccountNumber'].errors?.['required']">
+                AccountNumber number is required
+            </div>
+        </div>
+
         <label for="SetLoginPassword">Set Login Password </label>&nbsp;
         <input name="SetLoginPassword" type="password" /><br><br>
         <label for="ConfirmLoginPassword">Confirm Login Password </label> &nbsp;
@@ -18,6 +23,6 @@
         <label for="otp">Enter OTP</label>&nbsp;
         <input name="otp" type="text" /><br><br>
 
-        <button type="submit" >Submit</button>
+        <button class="btn btn-primary" type="submit" >Submit</button>
     </form>
 </div>

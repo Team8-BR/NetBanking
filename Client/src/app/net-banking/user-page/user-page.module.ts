@@ -5,6 +5,7 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { RouterModule } from '@angular/router';
 import { UserPageComponent } from './user-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,7 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 
  
   ],
-  imports: [RouterModule
+  imports: [RouterModule,ReactiveFormsModule
    
   ],
   providers: [],
