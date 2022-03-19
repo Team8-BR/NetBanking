@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -9,30 +9,34 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FundTransferComponent  {
   
   Beneficiaryinfo:FormGroup = this._bfi.group({
-  BeneficiaryName:['',[Validators.required]],
-  BeneficiaryAccountNumber:['',[Validators.required]],
-  ReEnterAccountNumber:['',[Validators.required]],
+  beneficiaryname:['',[Validators.required]],
+  beneficiaryaccountnumber:['',[Validators.required]],
+  reenteraccountnumber:['',[Validators.required]],
+  nickname:['']
 })
 
 IMPSpaymentinfo:FormGroup=this._imps.group({
-  FromAccount:['',[Validators.required]],
-  ToAccount:['',[Validators.required]],
-  Amount:['',[Validators.required]],
-  RecepientMobileNumber:['',[Validators.required]],
-  TransactionDate:['',[Validators.required]],
-  MaturityInstruction:['',[Validators.required]]
+  fromaccount:['',[Validators.required]],
+  Toaccount:['',[Validators.required]],
+  amount:['',[Validators.required]],
+  recepientmobilenumber:['',[Validators.required]],
+  transactiondate:['',[Validators.required]],
+  maturityinstructions:['',[Validators.required]],
+  remarks:['']
 })
 NEFTpaymentinfo:FormGroup=this._neft.group({
-  FromAccount:['',[Validators.required]],
-  ToAccount:['',[Validators.required]],
-  Amount:['',[Validators.required]],
-  TransactionDate:['',[Validators.required]]
+  fromaccount:['',[Validators.required]],
+  Toaccount:['',[Validators.required]],
+  amount:['',[Validators.required]],
+  transactiondate:['',[Validators.required]],
+  remarks:['']
 })
 RTGSpaymentinfo:FormGroup=this._rtgs.group({
-  FromAccount:['',[Validators.required]],
-  ToAccount:['',[Validators.required]],
-  Amount:['',[Validators.required]],
-  TransactionDate:['',[Validators.required]]
+  fromaccount:['',[Validators.required]],
+  Toaccount:['',[Validators.required]],
+  amount:['',[Validators.required]],
+  transactiondate:['',[Validators.required]],
+  remarks:['']
 })
 constructor(private _bfi:FormBuilder, 
            private _imps:FormBuilder,

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,16 +17,14 @@ import { NetBankingModule } from './net-banking/net-banking.module';
 @NgModule({
   declarations: [
     AppComponent
- 
-    
-  
   ],
   imports: [
     BrowserModule,
     NetBankingModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,9 +11,40 @@
                 AccountNumber number is required
             </div>
         </div>
+        <div>
+           <label for="SetLoginPassword">Set Login Password </label>&nbsp;
+           <input name="SetLoginPassword" type="password" class="form" id="SetLoginPassword" /><br><br>
+        </div>
+        <div [hidden]="registration.controls['SetLoginPassword'].valid || registration.controls['SetLoginPassword'].pristine"
+          class="alert alert-danger">
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['required']">
+              Password is required
+        </div>
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['minlengtherror']">
+              Password length should be length:
+              {{registration.controls['password'].errors?.['minlengtherror'].expectedlength}}.
+              Current length:
+              length:{{registration.controls['SetLoginPassword'].errors?.['minlengtherror'].currentlength}}
+        </div>
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['maxlengtherror']">
+              Password length should NOT be more
+              than{{registration.controls['SetLoginPassword'].errors?.['maxlengtherror'].expectedlength}}. Current
+              length:{{registration.controls['SetLoginPassword'].errors?.['maxlengtherror'].currentlength}}
+        </div>
 
-        <label for="SetLoginPassword">Set Login Password </label>&nbsp;
-        <input name="SetLoginPassword" type="password" /><br><br>
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['uppercase']">
+              {{registration.controls['SetLoginPassword'].errors?.['uppercase']}}
+        </div>
+  
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['lowercase']">
+              {{registration.controls['SetLoginPassword'].errors?.['lowercase']}}
+        </div>
+
+        <div *ngIf="registration.controls['SetLoginPassword'].errors?.['digit']">
+              {{registration.controls['SetLoginPassword'].errors?.['digit']}}
+        </div>
+    </div>
+
         <label for="ConfirmLoginPassword">Confirm Login Password </label> &nbsp;
         <input name="ConfirmLoginPassword" type="password" /><br><br>
         <label for="SetTransactionPassword">Set Transaction Password </label>&nbsp;

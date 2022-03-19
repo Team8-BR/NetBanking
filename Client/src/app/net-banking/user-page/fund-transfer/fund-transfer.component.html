@@ -26,12 +26,12 @@
     </div>
     <br>
     <div class="form-group">
-        <label for="re-enteraccountnumber">Re-EnterAccountNumber:&nbsp;</label>
-        <input type="number" class="form" name="re-enteraccountnumber" id="re-enteraccountnumber" formControlName="re-enteraccountnumber">
+        <label for="reenteraccountnumber">Re-EnterAccountNumber:&nbsp;</label>
+        <input type="number" class="form" name="reenteraccountnumber" id="reenteraccountnumber" formControlName="reenteraccountnumber">
     </div>
-    <div [hidden]="Beneficiaryinfo.controls['re-enteraccountnumber'].valid || Beneficiaryinfo.controls['re-enteraccountnumber'].pristine"
+    <div [hidden]="Beneficiaryinfo.controls['reenteraccountnumber'].valid || Beneficiaryinfo.controls['reenteraccountnumber'].pristine"
         class="alert-danger">
-        <div *ngIf="Beneficiaryinfo.controls['re-enteraccountnumber'].errors?.['required']">
+        <div *ngIf="Beneficiaryinfo.controls['reenteraccountnumber'].errors?.['required']">
             Re-EnterAccountNumber!!!
         </div>
     </div>
@@ -40,7 +40,7 @@
     <br>
     <div class="form-group">
         <label for="nickname">NickName:&nbsp;</label>
-        <input type="number" class="form" name="nickname" id="nickname" formControlName="nickname">
+        <input type="text" class="form" name="nickname" id="nickname" formControlName="nickname">
     </div>
     <br>
     <button type="submit">Save as Beneficiary</button>
@@ -55,9 +55,9 @@
         <label for="fromaccount">FromAccount:&nbsp;</label>
         <input type="number" class="form" name="fromaccount" id="fromaccount" formControlName="fromaccount">
     </div>
-    <div [hidden]="IMPSpaymentinfo.controls['fromaccount'].valid || Beneficiaryinfo.controls['fromaccount'].pristine"
+    <div [hidden]="IMPSpaymentinfo.controls['fromaccount'].valid || IMPSpaymentinfo.controls['fromaccount'].pristine"
         class="alert-danger">
-        <div *ngIf="Beneficiaryinfo.controls['fromaccount'].errors?.['required']">
+        <div *ngIf="IMPSpaymentinfo.controls['fromaccount'].errors?.['required']">
             AccountNumber is required.
         </div>
     </div>
@@ -66,20 +66,20 @@
         <label for="Toaccount">ToAccount:&nbsp;</label>
         <input type="number" class="form" name="Toaccount" id="Toaccount" formControlName="Toaccount"><button type="submit">Add New+</button>
     </div>
-    <div [hidden]="IMPSpaymentinfo.controls['Toaccount'].valid || Beneficiaryinfo.controls['Toaccount'].pristine"
-       class="alert-danger">
-      <div *ngIf="Beneficiaryinfo.controls['Toaccount'].errors?.['required']">
-        AccountNumber is required.
-      </div>
+    <div [hidden]="IMPSpaymentinfo.controls['Toaccount'].valid || IMPSpaymentinfo.controls['Toaccount'].pristine"
+    class="alert-danger">
+        <div *ngIf="IMPSpaymentinfo.controls['Toaccount'].errors?.['required']">
+          AccountNumber is required.
+        </div>
     </div>
     <br>
     <div class="form-group">
         <label for="amount">Amount:&nbsp;</label>
         <input type="text" class="form" name="amount" id="amount" formControlName="amount">
     </div>
-    <div [hidden]="IMPSpaymentinfo.controls['amount'].valid || Beneficiaryinfo.controls['amount'].pristine"
+    <div [hidden]="IMPSpaymentinfo.controls['amount'].valid || IMPSpaymentinfo.controls['amount'].pristine"
         class="alert-danger">
-        <div *ngIf="Beneficiaryinfo.controls['amount'].errors?.['required']">
+        <div *ngIf="IMPSpaymentinfo.controls['amount'].errors?.['required']">
             Enter the Amount!!!!.
         </div>
     </div>
@@ -89,16 +89,16 @@
         <input type="text" class="form" name="recepientmobilenumber" id="recepientmobilenumber" formControlName="recepientmobilenumber">
     </div>
     <br>
-    <div [hidden]="IMPSpaymentinfo.controls['recepientmobilenumber'].valid || Beneficiaryinfo.controls['recepientmobilenumber'].pristine"
+    <div [hidden]="IMPSpaymentinfo.controls['recepientmobilenumber'].valid || IMPSpaymentinfo.controls['recepientmobilenumber'].pristine"
         class="alert-danger">
-        <div *ngIf="Beneficiaryinfo.controls['recepientmobilenumber'].errors?.['required']">
+        <div *ngIf="IMPSpaymentinfo.controls['recepientmobilenumber'].errors?.['required']">
           Enter the Mobile Number!!!!.
         </div>
     </div>
     <br>
     <div class="form-group">
         <label for="transactiondate">TransactionDate:&nbsp;</label>
-        <input type="text" class="form" name="transactiondate" id="transactiondate" formControlName="transactiondate">
+        <input type="date" class="form" name="transactiondate" id="transactiondate" formControlName="transactiondate">
     </div>
     <br>
     <div class="form-group">
@@ -122,9 +122,9 @@
         <label for="fromaccount">FromAccount:&nbsp;</label>
         <input type="number" class="form" name="fromaccount" id="fromaccount" formControlName="fromaccount">
     </div>
-    <div [hidden]="NEFTpaymentinfo.controls['fromaccount'].valid || Beneficiaryinfo.controls['fromaccount'].pristine"
+    <div [hidden]="NEFTpaymentinfo.controls['fromaccount'].valid || NEFTpaymentinfo.controls['fromaccount'].pristine"
           class="alert-danger">
-        <div *ngIf="Beneficiaryinfo.controls['fromaccount'].errors?.['required']">
+        <div *ngIf="NEFTpaymentinfo.controls['fromaccount'].errors?.['required']">
           AccountNumber is required.
         </div>
     </div>
@@ -133,9 +133,9 @@
         <label for="Toaccount">ToAccount:&nbsp;</label>
         <input type="number" class="form" name="Toaccount" id="Toaccount" formControlName="Toaccount"><button type="submit">Add New+</button>
     </div>
-    <div [hidden]="NEFTpaymentinfo.controls['Toaccount'].valid || Beneficiaryinfo.controls['Toaccount'].pristine"
+    <div [hidden]="NEFTpaymentinfo.controls['Toaccount'].valid || NEFTpaymentinfo.controls['Toaccount'].pristine"
       class="alert-danger">
-       <div *ngIf="Beneficiaryinfo.controls['Toaccount'].errors?.['required']">
+       <div *ngIf="NEFTpaymentinfo.controls['Toaccount'].errors?.['required']">
          AccountNumber is required.
         </div>
     </div>
@@ -144,16 +144,16 @@
         <label for="amount">Amount:&nbsp;</label>
         <input type="text" class="form" name="amount" id="amount" formControlName="amount">
     </div>
-    <div [hidden]="NEFTpaymentinfo.controls['amount'].valid || Beneficiaryinfo.controls['amount'].pristine"
+    <div [hidden]="NEFTpaymentinfo.controls['amount'].valid || NEFTpaymentinfo.controls['amount'].pristine"
      class="alert-danger">
-       <div *ngIf="Beneficiaryinfo.controls['amount'].errors?.['required']">
+       <div *ngIf="NEFTpaymentinfo.controls['amount'].errors?.['required']">
          Enter the Amount!!!!.
         </div>
     </div>
     <br>
     <div class="form-group">
         <label for="transactiondate">TransactionDate:&nbsp;</label>
-        <input type="text" class="form" name="transactiondate" id="transactiondate" formControlName="transactiondate">
+        <input type="date" class="form" name="transactiondate" id="transactiondate" formControlName="transactiondate">
     </div>
     <br>
     <div class="form-group">
@@ -182,9 +182,9 @@
         <label for="fromaccount">FromAccount:&nbsp;</label>
         <input type="number" class="form" name="fromaccount" id="fromaccount" formControlName="fromaccount">
     </div>
-    <div [hidden]="RTGSpaymentinfo.controls['fromaccount'].valid || Beneficiaryinfo.controls['fromaccount'].pristine"
+    <div [hidden]="RTGSpaymentinfo.controls['fromaccount'].valid || RTGSpaymentinfo.controls['fromaccount'].pristine"
         class="alert-danger">
-      <div *ngIf="Beneficiaryinfo.controls['fromaccount'].errors?.['required']">
+      <div *ngIf="RTGSpaymentinfo.controls['fromaccount'].errors?.['required']">
         AccountNumber is required.
       </div>
     </div>
@@ -193,9 +193,9 @@
         <label for="Toaccount">ToAccount:&nbsp;</label>
         <input type="number" class="form" name="Toaccount" id="Toaccount" formControlName="Toaccount"><button type="submit">Add New+</button>
     </div>
-    <div [hidden]="NEFTpaymentinfo.controls['Toaccount'].valid || Beneficiaryinfo.controls['Toaccount'].pristine"
+    <div [hidden]="RTGSpaymentinfo.controls['Toaccount'].valid || RTGSpaymentinfo.controls['Toaccount'].pristine"
        class="alert-danger">
-        <div *ngIf="Beneficiaryinfo.controls['Toaccount'].errors?.['required']">
+        <div *ngIf="RTGSpaymentinfo.controls['Toaccount'].errors?.['required']">
           AccountNumber is required.
         </div>
     </div>
@@ -205,16 +205,16 @@
         <input type="text" class="form" name="amount" id="amount" formControlName="amount">
     </div>
     <br>
-    <div [hidden]="NEFTpaymentinfo.controls['amount'].valid || Beneficiaryinfo.controls['amount'].pristine"
+    <div [hidden]="RTGSpaymentinfo.controls['amount'].valid || RTGSpaymentinfo.controls['amount'].pristine"
      class="alert-danger">
-       <div *ngIf="Beneficiaryinfo.controls['amount'].errors?.['required']">
+       <div *ngIf="RTGSpaymentinfo.controls['amount'].errors?.['required']">
          Enter the Amount!!!!.
        </div>
     </div>
     <br>
     <div class="form-group">
         <label for="transactiondate">TransactionDate:&nbsp;</label>
-        <input type="text" class="form" name="transactiondate" id="transactiondate" formControlName="transactiondate">
+        <input type="date" class="form" name="transactiondate" id="transactiondate" formControlName="transactiondate">
     </div>
     <br>
     <div class="form-group">

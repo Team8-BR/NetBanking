@@ -55,10 +55,17 @@
        <div *ngIf="Accountinfo.controls['mobileno'].errors?.['required']">
           MobileNumber is required!!!
        </div>
-       <div *ngIf="Accountinfo.controls['mobileno'].errors?.['lengtherror']">
-        {{Accountinfo.controls['mobileno'].errors?.['lengtherror'].message}}
-        current length is: &nbsp; {{Accountinfo.controls['mobileno'].errors?.['mobileno'].currentlength}}
-      </div>
+       <div *ngIf="Accountinfo.controls['mobileno'].errors?.['minlengtherror']">
+        MobileNumber length should be length:
+        {{Accountinfo.controls['mobileno'].errors?.['minlengtherror'].expectedlength}}.
+        Current length:
+        length:{{Accountinfo.controls['mobileno'].errors?.['minlengtherror'].currentlength}}
+    </div>
+    <div *ngIf="Accountinfo.controls['mobileno'].errors?.['maxlengtherror']">
+        MobileNumber length should NOT be more
+        than{{Accountinfo.controls['mobileno'].errors?.['maxlengtherror'].expectedlength}}. Current
+        length:{{Accountinfo.controls['mobileno'].errors?.['maxlengtherror'].currentlength}}
+    </div>
     </div>
     <br>
     <div class="form-group">
@@ -90,6 +97,12 @@
         <label for="dob">Date Of Birth:</label>
         <input type="date" name="dob" class="form" id="dob" formControlName="dob"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['dob'].valid || Accountinfo.controls['dob'].pristine"
+       class="alert-danger">
+       <div *ngIf="Accountinfo.controls['dob'].errors?.['required']">
+           Date Of Birth is required!!!
+       </div>
+    </div>
     <br>
     <p>Residential Address<p>
     <div class="form-group">
@@ -111,16 +124,34 @@
         <label for="residentialState">Residential State:</label>
         <input type="text" name="residentialState" class="form" id="residentialState" formControlName="residentialState"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['residentialState'].valid || Accountinfo.controls['residentialState'].pristine"
+       class="alert-danger">
+       <div *ngIf="Accountinfo.controls['residentialState'].errors?.['required']">
+        Residential State is required!!!
+       </div>
+    </div>
     <br>
     <div class="form-group">
         <label for="residentialCity">Residential City:</label>
         <input type="text" name="residentialCity" class="form" id="residentialCity" formControlName="residentialCity"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['residentialCity'].valid || Accountinfo.controls['residentialCity'].pristine"
+      class="alert-danger">
+        <div *ngIf="Accountinfo.controls['residentialCity'].errors?.['required']">
+         Residential City is required!!!
+        </div>
     </div>
     <br>
     <div class="form-group">
         <label for="residentialPincode">Residential Pincode:</label>
         <input type="number" name="residentialPincode" class="form" id="residentialPincode" formControlName="residentialPincode"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['residentialPincode'].valid || Accountinfo.controls['residentialPincode'].pristine"
+    class="alert-danger">
+      <div *ngIf="Accountinfo.controls['residentialPincode'].errors?.['required']">
+       Residential Pincode is required!!!
+      </div>
+  </div>
     <br>
     <input type="checkbox" name="Residential Address" value="Residential Address" >Same As Residential Address
     <p>Permanent Address</p>
@@ -143,37 +174,79 @@
         <label for="permanentState">Permanent State:</label>
         <input type="text" name="permanentState" class="form" id="permanentState" formControlName="permanentState"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['permanentState'].valid || Accountinfo.controls['permanentState'].pristine"
+    class="alert-danger">
+      <div *ngIf="Accountinfo.controls['permanentState'].errors?.['required']">
+        Permanent State is required!!!
+      </div>
+  </div>
     <br>
     <div class="form-group">
         <label for="permanentCity">Permanent City:</label>
         <input type="text" name="permanentCity" class="form" id="permanentCity" formControlName="permanentCity"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['permanentCity'].valid || Accountinfo.controls['permanentCity'].pristine"
+    class="alert-danger">
+      <div *ngIf="Accountinfo.controls['permanentCity'].errors?.['required']">
+        Permanent City is required!!!
+      </div>
+  </div>
     <br>
     <div class="form-group">
         <label for="permanentPincode">Permanent Pincode:</label>
         <input type="number" name="permanentPincode" class="form" id="permanentPincode" formControlName="permanentPincode"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['permanentPincode'].valid || Accountinfo.controls['permanentPincode'].pristine"
+    class="alert-danger">
+      <div *ngIf="Accountinfo.controls['permanentPincode'].errors?.['required']">
+        Permanent Pincode is required!!!
+      </div>
+   </div>
     <br>
     <p>Occupation Details</p>
     <div class="form-group">
         <label for="occupationdetails">Occupation Details:</label>
         <input type="text" name="occupationdetails" class="form" id="occupationdetails" formControlName="occupationdetails"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['occupationdetails'].valid || Accountinfo.controls['occupationdetails'].pristine"
+    class="alert-danger">
+     <div *ngIf="Accountinfo.controls['occupationdetails'].errors?.['required']">
+        Occupation Details is required!!!
+     </div>
+  </div>
     <br>
     <div class="form-group">
         <label for="occupationType">Occupation Type:</label>
         <input type="text" name="occupationType" class="form" id="occupationType" formControlName="occupationType"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['occupationType'].valid || Accountinfo.controls['occupationType'].pristine"
+     class="alert-danger">
+      <div *ngIf="Accountinfo.controls['occupationType'].errors?.['required']">
+        Occupation Type is required!!!
+      </div>
+   </div>
     <br>
     <div class="form-group">
         <label for="sourceofincome">Source Of Income:</label>
         <input type="text" name="sourceofincome" class="form" id="sourceofincome" formControlName="sourceofincome"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['sourceofincome'].valid || Accountinfo.controls['sourceofincome'].pristine"
+     class="alert-danger">
+     <div *ngIf="Accountinfo.controls['sourceofincome'].errors?.['required']">
+        Source Of Income is required!!!
+     </div>
+  </div>
     <br>
     <div class="form-group">
         <label for="grossAnnualIncome">Gross Annual Income:</label>
         <input type="number" name="grossAnnualIncome" class="form" id="grossAnnualIncome" formControlName="grossAnnualIncome"/><br>
     </div>
+    <div [hidden]="Accountinfo.controls['grossAnnualIncome'].valid || Accountinfo.controls['grossAnnualIncome'].pristine"
+     class="alert-danger">
+     <div *ngIf="Accountinfo.controls['grossAnnualIncome'].errors?.['required']">
+        Gross Annual Income is required!!!
+      </div>
+   </div>
     <br>
     <div class="form-group">
         <label for="status">Status:</label>
