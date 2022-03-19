@@ -23,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
    
   ],
   providers: [],
-  exports : [UserPageComponent]
+  exports : [UserPageComponent,FundTransferComponent]
  
 })
 export class UserPageModule { }

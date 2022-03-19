@@ -1,5 +1,6 @@
 import { Component ,OnInit} from '@angular/core';
-import {  FormBuilder,FormGroup,Validators } from '@angular/forms';
+import {  FormBuilder,FormControl,FormGroup,Validators } from '@angular/forms';
+import { LengthValidator } from '../customvalidators/length-validators';
 
 @Component(
   {
@@ -9,17 +10,24 @@ import {  FormBuilder,FormGroup,Validators } from '@angular/forms';
   })
   
 export class CreateAccountComponent implements OnInit {
-
-  
-      
-
-  
-  constructor( ){}
+  Accountinfo:FormGroup=this._ai.group({
+    customerId :['',[Validators.required]],
+    title : ['',[Validators.required]],
+    firstName: ['',[Validators.required]],
+    lastName : ['',[Validators.required]],
+    mobileno : ['',[Validators.required,
+                    LengthValidator.Length]],
+    emailId : ['',[Validators.required,
+                   Validators.email]],
+    aadhaarCardNumber :['',[Validators.required,
+                            LengthValidator.Length]] 
+  })
+  constructor(private _ai:FormBuilder){}
   ngOnInit():void{
 
   }
-  submitData(){
-    
+  submitData() {
+    console.log(this.Accountinfo)
   }
   
     

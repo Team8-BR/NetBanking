@@ -18,6 +18,7 @@ import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.componen
 import { HttpClientModule } from '@angular/common/http';
 import { AccountService } from './services/account.service';
 import { CommonModule } from '@angular/common';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -32,6 +33,7 @@ import { CommonModule } from '@angular/common';
     CreateAccountComponent,
 
     AdminNavbarComponent,
+    AdminComponent
 
 
     
