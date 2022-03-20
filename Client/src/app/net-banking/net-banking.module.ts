@@ -24,6 +24,7 @@ import { RespondedAccountsComponent } from './admin/responded-accounts/responded
 import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
 import { RequestedAccountDetailsComponent } from './admin/requested-account-details/requested-account-details.component';
 import { CredentialService } from './services/credential.service';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 
@@ -42,6 +43,7 @@ import { CredentialService } from './services/credential.service';
     RespondedAccountsComponent,
     AdminProfileComponent,
     RequestedAccountDetailsComponent,
+    DashboardComponent,
 
 
     

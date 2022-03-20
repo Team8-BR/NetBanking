@@ -11,6 +11,7 @@ import { LoginComponent } from "./login/login.component";
 import { RegistrationComponent } from "./registration/registration.component";
 import { AccountDetailsComponent } from "./user-page/account-details/account-details.component";
 import { AccountStatementComponent } from "./user-page/account-statement/account-statement.component";
+import { AccountSummaryComponent } from "./user-page/account-summary/account-summary.component";
 import { FundTransferComponent } from "./user-page/fund-transfer/fund-transfer.component";
 import { UserPageComponent } from "./user-page/user-page.component";
 
@@ -22,12 +23,13 @@ const AppRoutes : Routes = [
     {path : 'login', component : LoginComponent },
     {path : 'register', component : RegistrationComponent},
     {path : 'CreateAccount', component : CreateAccountComponent},
-    {path : 'user', component : UserPageComponent, 
+    {path : 'user/:customerId', component : UserPageComponent, 
         children : 
         [
-            {path : 'statement', component : AccountStatementComponent},
-            {path : 'profile', component : AccountDetailsComponent},
-            {path : 'transaction', component : FundTransferComponent},
+            {path : 'statement/:customerId', component : AccountStatementComponent},
+            {path : 'profile/:customerId', component : AccountDetailsComponent},
+            {path : 'transaction/:customerId', component : FundTransferComponent},
+            {path : 'summary/:customerId', component : AccountSummaryComponent}
         ]},
     {path : 'admin', component : AdminComponent , 
         children : 

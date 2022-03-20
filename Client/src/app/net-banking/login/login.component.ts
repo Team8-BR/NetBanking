@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   login() {
     switch (this.choice) {
       case 1:
-        this.router.navigateByUrl("/user");
+        this.router.navigateByUrl(`user/${this.Logininfo.controls["userId"].value}`);
         break;
 
       case 2:

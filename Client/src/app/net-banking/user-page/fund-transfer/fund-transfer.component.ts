@@ -1,5 +1,9 @@
 import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Account } from '../../Models/Account';
+import { AccountService } from '../../services/account.service';
 
 @Component({
   selector: 'app-fund-transfer',
@@ -38,11 +42,24 @@ RTGSpaymentinfo:FormGroup=this._rtgs.group({
   transactiondate:['',[Validators.required]],
   remarks:['']
 })
+Account? : Account
+
 constructor(private _bfi:FormBuilder, 
            private _imps:FormBuilder,
            private _neft:FormBuilder,
-           private _rtgs:FormBuilder){}
+           private _rtgs:FormBuilder,private _as : AccountService, private route : ActivatedRoute ){}
 
   
+
+           ngOnInit(): void {
+            const routeParams = this.route.snapshot.paramMap;
+            const customerIdFromRoute = Number(routeParams.get('customerId'));
+            const ObservableAccount : Observable<Account> = this._as.getAccountbyId(customerIdFromRoute)
+            ObservableAccount.subscribe(
+              (Accounts : Account) => this.Account = Accounts )
+          }
+        
+
+           
 
 }

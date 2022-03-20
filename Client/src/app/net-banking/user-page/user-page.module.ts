@@ -7,6 +7,8 @@ import { UserPageComponent } from './user-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AccountSummaryComponent } from './account-summary/account-summary.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -17,6 +19,8 @@ import { CommonModule } from '@angular/common';
     FundTransferComponent,
     AccountDetailsComponent,
     NavbarComponent,
+    AccountSummaryComponent,
+    DashboardComponent,
 
  
   ],
