@@ -80,48 +80,13 @@ Create table AdminDetails
 AdminID int primary key,
 AdminPassword varchar(10)
 )*/
-
-create proc TransactionHistory
-@TransactionReferenceID varchar(20),
-@AccountNumber varchar(20),
-@RecipientAccountNumber varchar(20),
-@Name varchar(50),
-@Transactionamount	money,
-@TransactionDate	datetime,
-@ModeID int,
-@Remark	varchar(120)
-as
-begin
-select TransactionReferenceID,AccountNumber,RecipientAccountNumber,Name,Transactionamount,TransactionDate,ModeID,Remark from
-TransactionDetails where AccountNumber=@AccountNumber
-end
-
-create proc InternetBanking
-@UserID int,
-@NetbankingPassword int,
-@TransactionPassword int,
-@AccountNumber varchar
-as
-begin
-select UserID,NetbankingPassword,TransactionPassword,AccountNumber from NetBankingCredentials 
-where AccountNumber=@AccountNumber
-end
-create proc AccountDetails
-@AccountNumber varchar,
-@Title	varchar(5),
-@FirstName	varchar(20),
-@LastName	varchar(20),
-@Mobileno	varchar(20),
-@emailID	varchar(40),
-@DOB date,
-@PermanentAddressLine1	varchar(120),
-@PermanentAddressLine2	varchar(120),
-@PermanentLandmark	varchar(120),
-@PermanentState	varchar(120),
-@PermanentCity	varchar(120),
-@PermanentPincode	varchar(120)
-as
-begin
-select Title,FirstName,LastName,Mobileno,emailID,DOB,PermanentAddressLine1,PermanentAddressLine2,PermanentLandmark,PermanentState,
-PermanentCity,PermanentPincode from AccountFields where AccountNumber = @AccountNumber
-end
+create table PayeeDetails(
+PayeeID int primary key identity(600100,1),
+PayeeName varchar(30),
+PayeeAccountNumber bigint,
+NickName varchar(30),
+CustomerID int
+)
+ alter table PayeeDetails add constraint fkey_CusID foreign key(CustomerID) references AccountFields(CustomerID)
+ alter table TransactionDetails add constraint fkey_PayID foreign key(PayeeID) references PayeeDetails(PayeeID)
+ alter table TransactionDetails add PayeeID int

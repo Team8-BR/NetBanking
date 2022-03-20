@@ -6,7 +6,11 @@
     
     <div class="form-group">
         <label for="title">Title:</label>
-        <input type="text" name="title" class="form" id="title" formControlName="title"/><br>
+        <select id="title" name="title">
+            <option value="Mr.">Mr.</option>
+            <option value="Ms.">Ms.</option>
+            <option value="Mrs.">Mrs.</option>
+          </select>
     </div>
     <br>
     <div class="form-group">
@@ -38,24 +42,16 @@
     <br>
     <div class="form-group">
         <label for="mobileno">MobileNumber:</label>
-        <input type="number" name="mobileno" class="form" id="mobileno" formControlName="mobileno"/><br>
+        <input type="number" name="mobileno" class="form" id="mobileno" formControlName="mobileno" /><br>
     </div>
     <div [hidden]="Accountinfo.controls['mobileno'].valid || Accountinfo.controls['mobileno'].pristine"
        class="alert-danger">
        <div *ngIf="Accountinfo.controls['mobileno'].errors?.['required']">
           MobileNumber is required!!!
        </div>
-       <div *ngIf="Accountinfo.controls['mobileno'].errors?.['minlengtherror']">
-        MobileNumber length should be length:
-        {{Accountinfo.controls['mobileno'].errors?.['minlengtherror'].expectedlength}}.
-        Current length:
-        length:{{Accountinfo.controls['mobileno'].errors?.['minlengtherror'].currentlength}}
-    </div>
-    <div *ngIf="Accountinfo.controls['mobileno'].errors?.['maxlengtherror']">
-        MobileNumber length should NOT be more
-        than{{Accountinfo.controls['mobileno'].errors?.['maxlengtherror'].expectedlength}}. Current
-        length:{{Accountinfo.controls['mobileno'].errors?.['maxlengtherror'].currentlength}}
-    </div>
+       <div *ngIf="Accountinfo.controls['mobileno'].errors?.['pattern']">
+           Please, Enter 10 digit Mobile Number.
+        </div>  
     </div>
     <br>
     <div class="form-group">
@@ -240,8 +236,8 @@
     <br>
     
     <br>
-    <div id="submitDiv">
-        <button type="submit" class="btn btn-success">Submit</button>
+    <div>
+        <button type="submit" [disabled]="!Accountinfo.valid" (click)="submitData()">Submit</button>
     </div>
 </form>
 
