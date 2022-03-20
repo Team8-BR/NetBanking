@@ -12,7 +12,7 @@ import { passwordValidator } from '../customvalidators/password-validators';
   
 export class CreateAccountComponent implements OnInit {
   Accountinfo:FormGroup=this._ai.group({
-    CustomerId :['',[Validators.required]],
+    CustomerId :[''],
     title : ['',[Validators.required]],
     firstName: ['',[Validators.required]],
     lastName : ['',[Validators.required]],

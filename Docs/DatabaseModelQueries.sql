@@ -89,3 +89,4 @@ CustomerID int
 )
  alter table PayeeDetails add constraint fkey_CusID foreign key(CustomerID) references AccountFields(CustomerID)
  alter table TransactionDetails add constraint fkey_PayID foreign key(PayeeID) references PayeeDetails(PayeeID)
+ alter table TransactionDetails add PayeeID int
