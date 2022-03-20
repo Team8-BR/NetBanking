@@ -3,17 +3,7 @@
 <p class="double">Open a Savings Account.</p>
 <p class="double">Personal Details</p>
 <form [formGroup]="Accountinfo"  (ngSubmit)="submitData()">
-    <div class="form-group">
-        <label for="CustomerId">CustomerId:</label>
-        <input type="number"  name="CustomerId" class="form" id="CustomerId" formControlName="CustomerId"/><br>
-    </div>
-    <div [hidden]="Accountinfo.controls['CustomerId'].valid || Accountinfo.controls['CustomerId'].pristine"
-       class="alert-danger">
-       <div *ngIf="Accountinfo.controls['CustomerId'].errors?.['required']">
-          CustomerId is required!!!
-       </div>
-    </div>
-    <br>
+    
     <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" name="title" class="form" id="title" formControlName="title"/><br>
@@ -248,10 +238,7 @@
       </div>
    </div>
     <br>
-    <div class="form-group">
-        <label for="status">Status:</label>
-        <input type="text" name="status" class="form" id="status" formControlName="status"/><br>
-    </div>
+    
     <br>
     <div id="submitDiv">
         <button type="submit" class="btn btn-success">Submit</button>

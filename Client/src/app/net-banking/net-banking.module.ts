@@ -23,6 +23,7 @@ import { RequestedAccountComponent } from './admin/requested-account/requested-a
 import { RespondedAccountsComponent } from './admin/responded-accounts/responded-accounts.component';
 import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
 import { RequestedAccountDetailsComponent } from './admin/requested-account-details/requested-account-details.component';
+import { CredentialService } from './services/credential.service';
 
 
 
@@ -48,7 +49,7 @@ import { RequestedAccountDetailsComponent } from './admin/requested-account-deta
   imports: [RouterModule,NetBankingRoutingModule,UserPageModule,FormsModule,ReactiveFormsModule,HttpClientModule,CommonModule
     
   ],
-  providers: [AccountService],
+  providers: [AccountService, CredentialService],
   bootstrap: [],
   exports : [HomePageComponent]
 })
