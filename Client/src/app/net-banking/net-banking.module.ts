@@ -18,6 +18,11 @@ import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.componen
 import { HttpClientModule } from '@angular/common/http';
 import { AccountService } from './services/account.service';
 import { CommonModule } from '@angular/common';
+import { AdminComponent } from './admin/admin.component';
+import { RequestedAccountComponent } from './admin/requested-account/requested-account.component';
+import { RespondedAccountsComponent } from './admin/responded-accounts/responded-accounts.component';
+import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
+import { RequestedAccountDetailsComponent } from './admin/requested-account-details/requested-account-details.component';
 
 
 
@@ -30,8 +35,12 @@ import { CommonModule } from '@angular/common';
     RegistrationComponent,
     HomePageComponent,
     CreateAccountComponent,
-
+    AdminComponent,
     AdminNavbarComponent,
+    RequestedAccountComponent,
+    RespondedAccountsComponent,
+    AdminProfileComponent,
+    RequestedAccountDetailsComponent,
 
 
     

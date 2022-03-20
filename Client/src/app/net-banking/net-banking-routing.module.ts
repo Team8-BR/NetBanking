@@ -1,6 +1,10 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AdminProfileComponent } from "./admin/admin-profile/admin-profile.component";
 import { AdminComponent } from "./admin/admin.component";
+import { RequestedAccountDetailsComponent } from "./admin/requested-account-details/requested-account-details.component";
+import { RequestedAccountComponent } from "./admin/requested-account/requested-account.component";
+import { RespondedAccountsComponent } from "./admin/responded-accounts/responded-accounts.component";
 import { CreateAccountComponent } from "./create-account/create-account.component";
 import { HomePageComponent } from "./home-page/home-page.component";
 import { LoginComponent } from "./login/login.component";
@@ -23,10 +27,19 @@ const AppRoutes : Routes = [
         [
             {path : 'statement', component : AccountStatementComponent},
             {path : 'profile', component : AccountDetailsComponent},
-            {path : 'transaction', component : FundTransferComponent}
+            {path : 'transaction', component : FundTransferComponent},
         ]},
-    {path : 'admin', component : AdminComponent},
-    
+    {path : 'admin', component : AdminComponent , 
+        children : 
+        [
+            {path : 'reqaccounts', component : RequestedAccountComponent},
+            {path : 'reqaccount/:customerId', component : RequestedAccountDetailsComponent},
+            {path : 'profile', component : AdminProfileComponent},
+            {path : 'resaccounts', component : RespondedAccountsComponent},
+        ]},
+   
+   
+    // admin/reqaccounts
 ]
 
 

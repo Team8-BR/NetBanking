@@ -12,19 +12,8 @@ import { AccountService } from '../services/account.service';
 })
 export class AdminComponent  implements OnInit{
 
+  constructor() { }
 
-
-
-  Accounts? : Account[]  
-  constructor(private _as : AccountService) { }
-
-  ngOnInit(): void {
-
-    const ObservableAccount : Observable<Account[]> = this._as.getAllaccount()
-    ObservableAccount.subscribe(
-      (Accounts : Account[]) => this.Accounts = Accounts
-    )
-
-  }
-
+  ngOnInit(): void { }
+ 
 }
