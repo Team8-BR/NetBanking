@@ -1,3 +1,9 @@
 *{ 
     text-align: center;
 }
+input{
+  box-sizing: content-box;
+}
+label{
+    text-align: left;
+}

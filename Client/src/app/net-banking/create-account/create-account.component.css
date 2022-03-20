@@ -1,3 +1,9 @@
+
+h2{
+    text-align: left;
+}
 *{
     text-align: center;
 }
+p.double {border-style: double;
+            }

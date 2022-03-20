@@ -1,129 +1,362 @@
 <br>
-<div>
-    <h4>Create Account</h4><br>
-    <form >
-        <label for="Title">Title</label> &nbsp;
-        <input name="Title" type="text" /><br><br>
-      
+<h2>Open an Account</h2>
+<p class="double">Open a Savings Account.</p>
+<p class="double">Personal Details</p>
+<form [formGroup]="Accountinfo"  (ngSubmit)="submitData()">
+    <div class="form-group">
+        <label for="CustomerId">CustomerId:</label>
+        <input type="number"  name="CustomerId" class="form" id="CustomerId" formControlName="CustomerId"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['CustomerId'].valid || Accountinfo.controls['CustomerId'].pristine"
+       class="alert-danger">
+       <div *ngIf="Accountinfo.controls['CustomerId'].errors?.['required']">
+          CustomerId is required!!!
+       </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" name="title" class="form" id="title" formControlName="title"/><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for=" firstName">FirstName:</label>
+        <input type="text" name="firstName" class="form" id="firstName" formControlName="firstName"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['firstName'].valid || Accountinfo.controls['firstName'].pristine"
+        class="alert-danger">
+       <div *ngIf="Accountinfo.controls['firstName'].errors?.['required']">
+           FirstName is required!!!
+       </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for=" lastName">LastName:</label>
+        <input type="text" name="lastName" class="form" id="lastName" formControlName="lastName"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['lastName'].valid || Accountinfo.controls['lastName'].pristine"
+       class="alert-danger">
+       <div *ngIf="Accountinfo.controls['lastName'].errors?.['required']">
+           LastName is required!!!
+       </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for=" middleName">MiddleName:</label>
+        <input type="text" name="middleName" class="form" id="middleName" formControlName="middleName"/><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="mobileno">MobileNumber:</label>
+        <input type="number" name="mobileno" class="form" id="mobileno" formControlName="mobileno"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['mobileno'].valid || Accountinfo.controls['mobileno'].pristine"
+       class="alert-danger">
+       <div *ngIf="Accountinfo.controls['mobileno'].errors?.['required']">
+          MobileNumber is required!!!
+       </div>
+       <div *ngIf="Accountinfo.controls['mobileno'].errors?.['minlengtherror']">
+        MobileNumber length should be length:
+        {{Accountinfo.controls['mobileno'].errors?.['minlengtherror'].expectedlength}}.
+        Current length:
+        length:{{Accountinfo.controls['mobileno'].errors?.['minlengtherror'].currentlength}}
+    </div>
+    <div *ngIf="Accountinfo.controls['mobileno'].errors?.['maxlengtherror']">
+        MobileNumber length should NOT be more
+        than{{Accountinfo.controls['mobileno'].errors?.['maxlengtherror'].expectedlength}}. Current
+        length:{{Accountinfo.controls['mobileno'].errors?.['maxlengtherror'].currentlength}}
+    </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="emailId">EmailID:</label>
+        <input type="text" name="emailId" class="form" id="emailId" formControlName="emailId"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['emailId'].valid || Accountinfo.controls['emailId'].pristine"
+        class="alert-danger">
+        <div *ngIf="Accountinfo.controls['emailId'].errors?.['required']">
+          EmailID is required!!!
+        </div>
+        <div *ngIf="Accountinfo.controls['emailId'].errors?.['email']">
+            Must be an email id
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for=" aadharCardNumber">AadharCardNumber:</label>
+        <input type="number" name="aadharCardNumber" class="form" id="aadharCardNumber" formControlName="aadharCardNumber"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['aadharCardNumber'].valid || Accountinfo.controls['aadharCardNumber'].pristine"
+      class="alert-danger">
+       <div *ngIf="Accountinfo.controls['aadharCardNumber'].errors?.['required']">
+         AadharCardNumber is required!!!
+       </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="dob">Date Of Birth:</label>
+        <input type="date" name="dob" class="form" id="dob" formControlName="dob"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['dob'].valid || Accountinfo.controls['dob'].pristine"
+       class="alert-danger">
+       <div *ngIf="Accountinfo.controls['dob'].errors?.['required']">
+           Date Of Birth is required!!!
+       </div>
+    </div>
+    <br>
+    <p>Residential Address<p>
+    <div class="form-group">
+        <label for="residentialAddressLine1">ResidentialAddressLine 1:</label>
+        <input type="text" name="residentialAddressLine1" class="form" id="residentialAddressLine1" formControlName="residentialAddressLine1"/><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="residentialAddressLine2">ResidentialAddressLine2:</label>
+        <input type="text" name="residentialAddressLine2" class="form" id="residentialAddressLine2" formControlName="residentialAddressLine2"/><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="residentialLandmark">Residential Landmark:</label>
+        <input type="text" name="residentialLandmark" class="form" id="residentialLandmark" formControlName="residentialLandmark"/><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="residentialState">Residential State:</label>
+        <input type="text" name="residentialState" class="form" id="residentialState" formControlName="residentialState"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['residentialState'].valid || Accountinfo.controls['residentialState'].pristine"
+       class="alert-danger">
+       <div *ngIf="Accountinfo.controls['residentialState'].errors?.['required']">
+        Residential State is required!!!
+       </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="residentialCity">Residential City:</label>
+        <input type="text" name="residentialCity" class="form" id="residentialCity" formControlName="residentialCity"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['residentialCity'].valid || Accountinfo.controls['residentialCity'].pristine"
+      class="alert-danger">
+        <div *ngIf="Accountinfo.controls['residentialCity'].errors?.['required']">
+         Residential City is required!!!
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="residentialPincode">Residential Pincode:</label>
+        <input type="number" name="residentialPincode" class="form" id="residentialPincode" formControlName="residentialPincode"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['residentialPincode'].valid || Accountinfo.controls['residentialPincode'].pristine"
+    class="alert-danger">
+      <div *ngIf="Accountinfo.controls['residentialPincode'].errors?.['required']">
+       Residential Pincode is required!!!
+      </div>
+  </div>
+    <br>
+    <input type="checkbox" name="Residential Address" value="Residential Address" >Same As Residential Address
+    <p>Permanent Address</p>
+    <div class="form-group">
+        <label for="permanentAddressLine1">Permanent Address Line1:</label>
+        <input type="text" name="permanentAddressLine1" class="form" id="permanentAddressLine1" formControlName="permanentAddressLine1"/><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="permanentAddressLine2">Permanent Address Line2:</label>
+        <input type="text" name="permanentAddressLine2" class="form" id="permanentAddressLine2" formControlName="permanentAddressLine2"/><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="permanentLandmark">Permanent Landmark:</label>
+        <input type="text" name="permanentLandmark" class="form" id="permanentLandmark" formControlName="permanentLandmark"/><br>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="permanentState">Permanent State:</label>
+        <input type="text" name="permanentState" class="form" id="permanentState" formControlName="permanentState"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['permanentState'].valid || Accountinfo.controls['permanentState'].pristine"
+    class="alert-danger">
+      <div *ngIf="Accountinfo.controls['permanentState'].errors?.['required']">
+        Permanent State is required!!!
+      </div>
+  </div>
+    <br>
+    <div class="form-group">
+        <label for="permanentCity">Permanent City:</label>
+        <input type="text" name="permanentCity" class="form" id="permanentCity" formControlName="permanentCity"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['permanentCity'].valid || Accountinfo.controls['permanentCity'].pristine"
+    class="alert-danger">
+      <div *ngIf="Accountinfo.controls['permanentCity'].errors?.['required']">
+        Permanent City is required!!!
+      </div>
+  </div>
+    <br>
+    <div class="form-group">
+        <label for="permanentPincode">Permanent Pincode:</label>
+        <input type="number" name="permanentPincode" class="form" id="permanentPincode" formControlName="permanentPincode"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['permanentPincode'].valid || Accountinfo.controls['permanentPincode'].pristine"
+    class="alert-danger">
+      <div *ngIf="Accountinfo.controls['permanentPincode'].errors?.['required']">
+        Permanent Pincode is required!!!
+      </div>
+   </div>
+    <br>
+    <p>Occupation Details</p>
+    <div class="form-group">
+        <label for="occupationdetails">Occupation Details:</label>
+        <input type="text" name="occupationdetails" class="form" id="occupationdetails" formControlName="occupationdetails"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['occupationdetails'].valid || Accountinfo.controls['occupationdetails'].pristine"
+    class="alert-danger">
+     <div *ngIf="Accountinfo.controls['occupationdetails'].errors?.['required']">
+        Occupation Details is required!!!
+     </div>
+  </div>
+    <br>
+    <div class="form-group">
+        <label for="occupationType">Occupation Type:</label>
+        <input type="text" name="occupationType" class="form" id="occupationType" formControlName="occupationType"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['occupationType'].valid || Accountinfo.controls['occupationType'].pristine"
+     class="alert-danger">
+      <div *ngIf="Accountinfo.controls['occupationType'].errors?.['required']">
+        Occupation Type is required!!!
+      </div>
+   </div>
+    <br>
+    <div class="form-group">
+        <label for="sourceofincome">Source Of Income:</label>
+        <input type="text" name="sourceofincome" class="form" id="sourceofincome" formControlName="sourceofincome"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['sourceofincome'].valid || Accountinfo.controls['sourceofincome'].pristine"
+     class="alert-danger">
+     <div *ngIf="Accountinfo.controls['sourceofincome'].errors?.['required']">
+        Source Of Income is required!!!
+     </div>
+  </div>
+    <br>
+    <div class="form-group">
+        <label for="grossAnnualIncome">Gross Annual Income:</label>
+        <input type="number" name="grossAnnualIncome" class="form" id="grossAnnualIncome" formControlName="grossAnnualIncome"/><br>
+    </div>
+    <div [hidden]="Accountinfo.controls['grossAnnualIncome'].valid || Accountinfo.controls['grossAnnualIncome'].pristine"
+     class="alert-danger">
+     <div *ngIf="Accountinfo.controls['grossAnnualIncome'].errors?.['required']">
+        Gross Annual Income is required!!!
+      </div>
+   </div>
+    <br>
+    <div class="form-group">
+        <label for="status">Status:</label>
+        <input type="text" name="status" class="form" id="status" formControlName="status"/><br>
+    </div>
+    <br>
+    <div id="submitDiv">
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>
 
-        <label for="First Name">First name</label>&nbsp;
-        <input name="First Name" type="text" /><br><br>
-       
 
-        <label for="Middle Name">Middle name</label> &nbsp;
-        <input name="Middle Name" type="text" /><br><br>
-       
 
-        <label for="Last Name">Last Name</label>&nbsp;
-        <input name="Last Name" type="text" /><br><br>
-      
 
-        <label for="Fathers Name">Fathers name</label> &nbsp;
-        <input name="Fathers Name" type="text" /><br><br>
-       
 
-        <label for="Mobile Number">Mobile Number</label>&nbsp;
-        <input name="Mobile Number" type="text" /><br><br>
-       
 
-        <label for="Email ID">Email ID</label>&nbsp;
-        <input name="Email ID" type="email" /><br><br>
-       
 
-        <label for="Aadhar Card Number">Aadhar Card Number</label>&nbsp;
-        <input name="Aadhar Card Number" type="text" /><br><br>
-        
 
-        <label for="Date of birth">Date of birth</label>&nbsp;
-        <input name="Date of birth" type="text" /><br><br>
-        
 
-        <h1>Residential Address</h1>
 
-        <label for="Address Line1">Enter Address Line1</label>&nbsp;
-        <input name="Address Line1" type="text" /><br><br>
-       
-        
 
-        <label for="Address Line2">Address Line2</label>&nbsp;
-        <input name="Address Line2" type="text" /><br><br>
-        
 
-        <label for="Landmark">Landmark</label>&nbsp;
-        <input name="Landmark" type="text" /><br><br>
-        
 
-        <label for="State">State</label>&nbsp;
-        <input name="State" type="text" /><br><br>
-        
 
-        <label for="City">City</label>&nbsp;
-        <input name="City" type="text" /><br><br>
-        
 
-        <label for="Date of birth">Date of birth</label>&nbsp;
-        <input name="Date of birth" type="text" /><br><br>
-       
 
-        <label for="Pincode">Pincode</label>&nbsp;
-        <input name="Pincode" type="number" /><br><br>
 
-        <h1> Permanent address</h1>
 
-        <input type="checkbox" name="Permanent Address same as Mailing Address" value="Permanent Address same as Mailing Address" ><br>
-        <label for="Address Line 1">Enter Address</label>&nbsp;
-        <input name="Address Line" type="text" /><br><br>
-        
-        
 
-        <label for="Address Line2">Address Line2</label>&nbsp;
-        <input name="Address Line2" type="text" /><br><br>
-        
-        
 
-        <label for="Landmark">Landmark</label>&nbsp;
-        <input name="Landmark" type="text" /><br><br>
-       
-        
 
-        <label for="State">State</label>&nbsp;
-        <input name="State" type="text" /><br><br>
-       
-        
 
-        <label for="City">City</label>&nbsp;
-        <input name="City" type="text" /><br><br>
-      
-        
 
-        <label for="Date of birth">Date of birth</label>&nbsp;
-        <input name="Date of birth" type="text" /><br><br>
-       
 
-        <label for="Pincode">Pincode</label>&nbsp;
-        <input name="Pincode" type="number" /><br><br>
-       
 
-        <h2>Occupation Details</h2>
-        <label for="Occupation Type">Occupation Type</label>&nbsp;
-        <input name="Occupation Type" type="text" /><br><br>
-       
-        
-        
-        <label for="Source of Income">Source of Income</label>&nbsp;
-        <input name="Source of Income" type="text" /><br><br>
-       
 
-        <label for="Gross Annual Income">Gross Annual Income</label>&nbsp;
-        <input name="Gross Annual Income" type="text" /><br><br>
-       
-        <h2>Debit/ATM Card</h2>
-        <h2>Do you want a debit card?*</h2>
 
-        <input type="checkbox" name="Opt for Net Banking" value="Opt for Net Banking" ><br>
-        <input type="checkbox" name="I agree" value="I agree" ><br>
 
-        <button class="btn btn-primary" type="submit" >Submit</button>
-    </form>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,13 +1,52 @@
 <br>
 <div>
     <h4>Login to your Account</h4><br>
-    <form>
+    <form [formGroup]="Logininfo">
         <input type="radio" name="radioCalc" id="radioAdd"  (change)="saveSelection(1)" >&nbsp;User&nbsp;&nbsp;
         <input type="radio" name="radioCalc" id="radioSub"  (change)="saveSelection(2)" >&nbsp;Admin<br>
-        <label for="userId">User ID </label> &nbsp;
-        <input name="userId" type="text" /><br><br>
-        <label for="Password">Password </label>&nbsp;
-        <input name="Password" type="password" /><br><br>
+        <div>
+          <label for="userId">User ID </label> &nbsp;
+           <input name="userId" type="text" class="form" id="userId" formControlName="userId"/><br><br>
+        </div>
+        <div [hidden]="Logininfo.controls['userId'].valid || Logininfo.controls['userId'].value || Logininfo.controls['userId'].pristine"
+          class="alert-danger">
+          <div *ngIf="Logininfo.controls['userId'].errors?.['required']">
+            LoginID is required
+          </div>
+        </div>
+        <div>
+         <label for="Password">Password </label>&nbsp;
+         <input name="Password" type="password" class="password" id="password" formControlName="password" /><br><br>
+        </div>
+        <div [hidden]="Logininfo.controls['password'].valid || Logininfo.controls['password'].pristine"
+        class="alert alert-danger">
+        <div *ngIf="Logininfo.controls['password'].errors?.['required']">
+            Password is required
+        </div>
+        <div *ngIf="Logininfo.controls['password'].errors?.['minlengtherror']">
+            Password length should be length:
+            {{Logininfo.controls['password'].errors?.['minlengtherror'].expectedlength}}.
+            Current length:
+            length:{{Logininfo.controls['password'].errors?.['minlengtherror'].currentlength}}
+        </div>
+        <div *ngIf="Logininfo.controls['password'].errors?.['maxlengtherror']">
+            Password length should NOT be more
+            than{{Logininfo.controls['password'].errors?.['maxlengtherror'].expectedlength}}. Current
+            length:{{Logininfo.controls['password'].errors?.['maxlengtherror'].currentlength}}
+        </div>
+
+        <div *ngIf="Logininfo.controls['password'].errors?.['uppercase']">
+            {{Logininfo.controls['password'].errors?.['uppercase']}}
+        </div>
+
+        <div *ngIf="Logininfo.controls['password'].errors?.['lowercase']">
+            {{Logininfo.controls['password'].errors?.['lowercase']}}
+        </div>
+
+        <div *ngIf="Logininfo.controls['password'].errors?.['digit']">
+            {{Logininfo.controls['password'].errors?.['digit']}}
+        </div>
+    </div>
         <button type="submit" (click)="login()">Login</button><br><br>
     </form>
 </div>
